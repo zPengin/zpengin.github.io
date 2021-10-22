@@ -4,7 +4,6 @@ layout: default
 
 <div class="page-main" style="background-image:url(/img/background.jpg)">
   <div class="line1">
-  
         <div class="header">
           <img class="image nocel" src="/img/avatar.png" width="100" height="100" alt="" title="Click here to change the picture (jpg or png ; 100x100 pixels)" onclick="image()">
           <div id="nom" contenteditable="true" class="nom">Eglantine Feuilledethé</div>
@@ -116,8 +115,8 @@ layout: default
               <div class="tab2- equipment">
                 <p class="tab__subtitle">Équipement</p>
                 <ul>
-                  {% for buddy in page.staff %}
-                  <li>{{buddy.title}}</li>
+                  {% for item in page.stuff %}
+                  <li>[ {{item.qt}} ] {{item.title}}</li>
                   {% endfor %}
                 </ul>
               </div>
