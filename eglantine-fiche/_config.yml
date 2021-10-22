@@ -49,6 +49,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# Collections
+collections:
+  sorts:
+    output: true
+
 defaults:
   - scope:
       path: "assets/img"

@@ -11,7 +11,7 @@ ul			{list-style: none;}
 .col li a	{font-weight:bold}
 .col a:link, .col a:visited, .col a:hover {text-decoration:none; color:#b80000}
 
-.line1 {width:100%; height:13vh; color:rgb(69, 165, 152)}
+.header {width:100%; height:13vh; background-color: #c6d7d3; color: #fff}
 .line2 {width:100%; height:15vh; padding:10px .5% 0 .5%}
 .line3 {height:71vh}
 .col1 {display:inline-block; width:15.5%; margin:0 .5% 0 .5%}
@@ -28,11 +28,11 @@ div.spells input[type=checkbox] {position:relative; top:3px; margin:0}
 .rub	{text-align:center; padding:8px 0 0 0px; font-size:1.2rem; font-weight:bold; color:#111; text-transform:uppercase}
 .subrub	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
 .tab__subtitle	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
-.textinput	{width:35%; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0 0 1px 0; border-color:rgba(200,200,200,0.5); background-color:rgba(0,0,0,0)}
+.textinput	{width:35%; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0; background-color:rgba(0,0,0,0)}
 .small		{width:25px}
 .bonusinput {width:35px; padding:2px;			margin:0px  3px 1px 3px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0; background-color:rgba(0,0,0,0)}
 .xpinput	{width:90px; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0 0 1px 0; border-color:#F4F4F4; background-color:rgba(0,0,0,0)}
-.valinput 	{width:55%; padding:0;										 font-size:2.2rem; text-align:center; font-weight:bold; border-width:0 0 1px 0; border-color:#F4F4F4; background-color:rgba(0,0,0,0)}
+.valinput 	{width:55%; padding:0; font-size:2.2rem; text-align:center; font-weight:bold; border: 0; background-color:rgba(0,0,0,0)}
 
 textarea, div.editable {border-width:0px; margin-bottom:5px; padding:0 5px 0 5px; resize:none; overflow-y:auto; width:100%; text-align:left; line-height:1.5rem; font-family:Verdana, Arial, sans-serif}
 textarea, div, table {font-size:1.1rem}
@@ -41,10 +41,10 @@ button.plusmoins {width:20px; padding 4px}
 
 input.grimoire {margin-left:75px; padding:0 4px;}
 
-/* Ligne 1 */
+/* Header */
 
-	.header {display:inline-block; width:66%}
-		img.image 	{float:left; height:80px; width:80px; border:3px inset #FFF; margin:6px; cursor:pointer}
+	.header__content {display:inline-block; width:66%}
+		img.image 	{float:left; height:80px; width:80px; margin:6px;}
 		.nom		{					   font-size:3.0rem; padding:2px 0 0  6px; font-weight:bold}
 		.classerace {display:inline-block; font-size:2.0rem; padding:4px 0 0  0px; font-weight:bold}
 		.back		{					   font-size:1.6rem; padding:4px 0 0 12px; font-weight:bold}
@@ -64,7 +64,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 /* Ligne 2 */
 
 	.caracBack	{width:5.8%; height:13vh; margin:0 0.2% 0 0; padding-top:6px; text-align:center;
-				background-image:url(../img/sheet/borderCarac.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+		border: 1px solid #c6d7d3; background-color:#fff}
 	.caracLeg	{display:block; width:100%; height:2.6vh; background-color:rgba(0,0,0,0)}
 	.caracMod	{display:block; width:100%; height:5.8vh; background-color:rgba(0,0,0,0); font-weight:bold}
 	.caracVal	{display:block; width:100%; height:3vh; background-color:rgba(0,0,0,0); padding-left:5px}
@@ -190,7 +190,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	.interface	{width:29%}
 	.icones		{width:6%}
 
-	.line1 {height:auto}
+	.header {height:auto}
 	.line2 {height:auto}
 	.line3 {height:auto}
 
@@ -226,7 +226,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 
 	.icones	{width:10%}
 
-	.line1	{position:sticky; position:-webkit-sticky; top:0; background-color:black; z-index:1}
+	.header	{position:sticky; position:-webkit-sticky; top:0; background-color:black; z-index:1}
 	.line2	{margin-bottom:5px}
 
 	.col1	{width:98%; margin:0 1% 5px 1%}

@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="page-main" style="background-image:url({{ "/img" | prepend: site.baseurl }}/background.jpg)">
-  <div class="line1">
-        <div class="header">
+  <div class="header">
+        <div class="header__content">
           <img class="image nocel" src="{{ "/img" | prepend: site.baseurl }}/avatar.png" width="100" height="100" alt="" title="Click here to change the picture (jpg or png ; 100x100 pixels)" onclick="image()">
           <div id="nom" contenteditable="true" class="nom">Eglantine Feuilledethé</div>
           <div id="classe" contenteditable="true" class="classerace">Clerc (lumière) 1</div>
@@ -20,8 +20,17 @@ layout: default
         </div>
         
       </div><div class="line2">
-    
-        <div class="block caracBack"><div class="caracLeg">Force</div><div class="caracMod"><input class="valinput" maxlength="3" value="+1"></div><div class="caracVal"><input id="carac0" class="textinput" maxlength="2" value="13"></div></div><div class="block caracBack"><div class="caracLeg">Dextérité</div><div class="caracMod"><input class="valinput" maxlength="3" value="+3"></div><div class="caracVal"><input id="carac1" class="textinput" maxlength="2" value="16"></div></div><div class="block caracBack"><div class="caracLeg">Constitution</div><div class="caracMod"><input class="valinput" maxlength="3" value="+2"></div><div class="caracVal"><input id="carac2" class="textinput" maxlength="2" value="14"></div></div><div class="block caracBack"><div class="caracLeg">Intelligence</div><div class="caracMod"><input class="valinput" maxlength="3" value="+0"></div><div class="caracVal"><input id="carac3" class="textinput" maxlength="2" value="11"></div></div><div class="block caracBack"><div class="caracLeg">Sagesse</div><div class="caracMod"><input class="valinput" maxlength="3" value="+4"></div><div class="caracVal"><input id="carac4" class="textinput" maxlength="2" value="18"></div></div><div class="block caracBack"><div class="caracLeg">Charisme</div><div class="caracMod"><input class="valinput" maxlength="3" value="+1"></div><div class="caracVal"><input id="carac5" class="textinput" maxlength="2" value="12"></div></div><div class="block bonusBack">
+        {% for stat in page.stats %}
+            <div class="block caracBack">
+              <div class="caracLeg">{{ stat.title }}</div>
+              <div class="caracMod">
+                <input class="valinput" maxlength="3" value="{{ stat.modifier }}"></div>
+              <div class="caracVal">
+                <input id="carac0" class="textinput" maxlength="2" value="{{ stat.total }}">
+              </div>
+            </div>
+        {% endfor %}
+        <div class="block bonusBack">
           <input id="bonusMait" class="valinput bonusVal" maxlength="3" value="+2">
           <br>Maîtrise<br>&nbsp;
         </div><div class="block CABack">
@@ -65,8 +74,15 @@ layout: default
         </div><div class="col2">
     
           <div class="blockPassive passive">
-            <input id="percPass" class="bonusinput passiveVal" maxlength="2" value="14">Sagesse (Perception) passive			</div><div class="blockCadre comp">
-          <input id="compMait0" type="checkbox"><input id="compBonus0" class="bonusinput" maxlength="3" value="+3">Acrobaties (Dex)<br><input id="compMait1" type="checkbox"><input id="compBonus1" class="bonusinput" maxlength="3" value="+0">Arcanes (Int)<br><input id="compMait2" type="checkbox"><input id="compBonus2" class="bonusinput" maxlength="3" value="+1">Athlétisme (For)<br><input id="compMait3" type="checkbox"><input id="compBonus3" class="bonusinput" maxlength="3" value="+3">Discrétion (Dex)<br><input id="compMait4" type="checkbox"><input id="compBonus4" class="bonusinput" maxlength="3" value="+4">Dressage (Sag)<br><input id="compMait5" type="checkbox"><input id="compBonus5" class="bonusinput" maxlength="3" value="+3">Escamotage (Dex)<br><input id="compMait6" type="checkbox"><input id="compBonus6" class="bonusinput" maxlength="3" value="+0">Histoire (Int)<br><input id="compMait7" type="checkbox"><input id="compBonus7" class="bonusinput" maxlength="3" value="+1">Intimidation (Cha)<br><input id="compMait8" type="checkbox" checked="checked"><input id="compBonus8" class="bonusinput" maxlength="3" value="+6">Intuition (Sag)<br><input id="compMait9" type="checkbox"><input id="compBonus9" class="bonusinput" maxlength="3" value="+0">Investigation (Int)<br><input id="compMait10" type="checkbox" checked="checked"><input id="compBonus10" class="bonusinput" maxlength="3" value="+6">Médecine (Sag)<br><input id="compMait11" type="checkbox"><input id="compBonus11" class="bonusinput" maxlength="3" value="+0">Nature (Int)<br><input id="compMait12" type="checkbox"><input id="compBonus12" class="bonusinput" maxlength="3" value="+4">Perception (Sag)<br><input id="compMait13" type="checkbox" checked="checked"><input id="compBonus13" class="bonusinput" maxlength="3" value="+3">Persuasion (Cha)<br><input id="compMait14" type="checkbox" checked="checked"><input id="compBonus14" class="bonusinput" maxlength="3" value="+2">Religion (Int)<br><input id="compMait15" type="checkbox"><input id="compBonus15" class="bonusinput" maxlength="3" value="+1">Représentation (Cha)<br><input id="compMait16" type="checkbox"><input id="compBonus16" class="bonusinput" maxlength="3" value="+4">Survie (Sag)<br><input id="compMait17" type="checkbox"><input id="compBonus17" class="bonusinput" maxlength="3" value="+1">Tromperie (Cha)<br>				<p class="rub">Compétences</p>
+            <input id="percPass" class="bonusinput passiveVal" maxlength="2" value="14">Sagesse (Perception) passive
+          </div>
+          <div class="blockCadre comp">
+            <ul>
+              {% for skill in page.competences %}
+              <li><input id="compMait0" type="checkbox" {% if skill.checked == true %}checked="checked" {% endif %}><input id="compBonus0" class="bonusinput" maxlength="3" value="{{skill.modifier}}">{{skill.title}}</li>
+              {% endfor %}
+            </ul>
+            <p class="rub">Compétences</p>
           </div>
     
         </div><div class="col3">
@@ -133,7 +149,30 @@ layout: default
                 <div class="incant">DD de sauvegarde des sorts</div><input id="DDSort" class="textinput incantVal" maxlength="4" value="14">
                 <div class="incant">Bonus d'attaque avec un sort</div><input id="bonusSort" class="textinput incantVal" maxlength="4" value="+6">
               </div><div class="tab3-2">
-                <form name="formSorts" method="post" action="https://www.aidedd.org/dnd/sorts.php" target="_blank"><p class="subrub">Sorts mineurs <input type="hidden" name="l" value="0"><input type="hidden" name="type" value="G"><input type="submit" class="grimoire" value="Générer le livre de sorts"></p><div id="sorts0" contenteditable="true" class="editable"><input type="hidden" name="select_item[]" value="&#39;lumiere&#39;"><a contenteditable="false" href="https://www.aidedd.org/dnd/sorts.php?vf=lumiere" target="_blank">lumière</a><br>...<br>...<br>...<br></div><p class="subrub">Niv 1 - Emplacements <input class="textinput small" id="slot1" maxlength="1" value="2"> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp1" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) +1)" "="">+</button></p><div id="sorts1" contenteditable="true" class="editable" style="overflow:visible"><input type="hidden" name="select_item[]" value="&#39;lueurs-feeriques&#39;"><input id="sortsMem10" name="check1" type="checkbox"> <a contenteditable="false" href="https://www.aidedd.org/dnd/sorts.php?vf=lueurs-feeriques" target="_blank">lueurs féeriques</a><br><input type="hidden" name="select_item[]" value="&#39;mains-brulantes&#39;"><input id="sortsMem11" name="check1" type="checkbox"> <a contenteditable="false" href="https://www.aidedd.org/dnd/sorts.php?vf=mains-brulantes" target="_blank">mains brûlantes</a><br><input id="sortsMem12" name="check1" type="checkbox"> ...<br><input id="sortsMem13" name="check1" type="checkbox"> ...<br><input id="sortsMem14" name="check1" type="checkbox"> ...<br><input id="sortsMem15" name="check1" type="checkbox"> ...<br><input id="sortsMem16" name="check1" type="checkbox"> ...<br><input id="sortsMem17" name="check1" type="checkbox"> ...<br><input id="sortsMem18" name="check1" type="checkbox"> ...<br><input id="sortsMem19" name="check1" type="checkbox"> ...<br><input id="sortsMem110" name="check1" type="checkbox"> ...<br></div><p class="subrub">Niv 2 - Emplacements <input class="textinput small" id="slot2" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp2&#39;).val(Number($(&#39;#slotExp2&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp2" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp2&#39;).val(Number($(&#39;#slotExp2&#39;).val()) +1)" "="">+</button></p><div id="sorts2" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 3 - Emplacements <input class="textinput small" id="slot3" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp3&#39;).val(Number($(&#39;#slotExp3&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp3" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp3&#39;).val(Number($(&#39;#slotExp3&#39;).val()) +1)" "="">+</button></p><div id="sorts3" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 4 - Emplacements <input class="textinput small" id="slot4" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp4&#39;).val(Number($(&#39;#slotExp4&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp4" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp4&#39;).val(Number($(&#39;#slotExp4&#39;).val()) +1)" "="">+</button></p><div id="sorts4" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 5 - Emplacements <input class="textinput small" id="slot5" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp5&#39;).val(Number($(&#39;#slotExp5&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp5" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp5&#39;).val(Number($(&#39;#slotExp5&#39;).val()) +1)" "="">+</button></p><div id="sorts5" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 6 - Emplacements <input class="textinput small" id="slot6" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp6&#39;).val(Number($(&#39;#slotExp6&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp6" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp6&#39;).val(Number($(&#39;#slotExp6&#39;).val()) +1)" "="">+</button></p><div id="sorts6" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 7 - Emplacements <input class="textinput small" id="slot7" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp7&#39;).val(Number($(&#39;#slotExp7&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp7" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp7&#39;).val(Number($(&#39;#slotExp7&#39;).val()) +1)" "="">+</button></p><div id="sorts7" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 8 - Emplacements <input class="textinput small" id="slot8" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp8&#39;).val(Number($(&#39;#slotExp8&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp8" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp8&#39;).val(Number($(&#39;#slotExp8&#39;).val()) +1)" "="">+</button></p><div id="sorts8" contenteditable="true" class="editable" style="overflow:visible"></div><p class="subrub">Niv 9 - Emplacements <input class="textinput small" id="slot9" maxlength="1" value=""> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp9&#39;).val(Number($(&#39;#slotExp9&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp9" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp9&#39;).val(Number($(&#39;#slotExp9&#39;).val()) +1)" "="">+</button></p><div id="sorts9" contenteditable="true" class="editable" style="overflow:visible"></div></form>					</div>
+                <form name="formSorts" method="post" target="_blank">
+                  <p class="subrub">Sorts mineurs</p>
+                  <div id="sorts0">
+                    {% for sort in site.sorts %}
+                      {% if sort.parent == "tours" %}
+                        {% if sort.checked == true %}
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ sort.url }}" class="sort__name" target="_blank">{{ sort.name }}</a>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <p class="tab__subtitle">Niv 1 - Emplacements <input class="textinput small" id="slot1" maxlength="1" value="2"> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp1" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) +1)" "="">+</button></p>
+                  <div id="sorts1" style="overflow:visible">
+
+                    {% for sort in site.sorts %}
+                      {% if sort.parent == "lvl1" %}
+                        <input type="hidden" name="select_item[]" value="{{ sort.id }}">
+                        <input id="sortsMem10" name="check1" type="checkbox" {% if sort.checked == true %}checked="checked"{% endif %}>
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ sort.url }}" class="sort__name" target="_blank">{{ sort.name }}</a>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           
@@ -153,22 +192,23 @@ layout: default
               <div class="tab4-1">
                 <p class="subrub"></p>
                 <textarea id="capacites">Sorts de domaine (lueurs féeriques, mains brûlantes)
-    
-    Sort mineur supplémentaire *
-    
-    Illumination protectrice
-    
-    Chanceux (relancer un 1)
-    
-    Vaillant (AV aux JdS vs effrayé)
-    
-    Agilité halfeline (peut passer dans l'espace d'une créature de taille supérieure)
-    
-    Résistance des robustes (AV aux JdS contre le poison et résistance contre les dégâts de poison)</textarea>
+                  Sort mineur supplémentaire *
+                  
+                  Illumination protectrice
+                  
+                  Chanceux (relancer un 1)
+                  
+                  Vaillant (AV aux JdS vs effrayé)
+                  
+                  Agilité halfeline (peut passer dans l'espace d'une créature de taille supérieure)
+                  
+                  Résistance des robustes (AV aux JdS contre le poison et résistance contre les dégâts de poison)
+                </textarea>
               </div><div class="tab4-2">
                 <p class="subrub">Capacités supplémentaires</p>
                 <textarea id="capacitesExtra">A travers leurs estomacs :
-    Vous pouvez gagner votre vie confortablement et ce gratuitement pendant votre temps libre, en travaillant comme cuisinier. De plus, vous pouvez nourrir gratuitement vos compagnons d'aventure avec des repas modestes chaque jour, à moins que le DM ne discerne que vous </textarea>
+                  Vous pouvez gagner votre vie confortablement et ce gratuitement pendant votre temps libre, en travaillant comme cuisinier. De plus, vous pouvez nourrir gratuitement vos compagnons d'aventure avec des repas modestes chaque jour, à moins que le DM ne discerne que vous
+                </textarea>
               </div>
               
             </div><div id="tab5" style="display:none">
@@ -187,33 +227,41 @@ layout: default
                 <textarea id="apparence">Les grands yeux noisettes, des sourcils épais mais courts, les cheveux attachés à la va-vite en chignon, elle porte une robe courte et bouffante.</textarea>
               </div><div class="tab5-3">
                 <p class="subrub">Traits de personnalité</p>
-                <textarea id="traits" class="trait">J’ai vécu toute ma vie dans un village et ne connaît alors rien au monde.
-    Je suis fascinée par tout ce que je croise et suis étonnée de tout et de rien à la fois. Les choses inhabituelles sont pour moi des événements communs.
-    Je crois en la vérité et ne dis que la vérité sans aucun sens de la diplomatie ce qui m’a souvent amené aux problèmes.
-    J’ai une excellente mémoire gustative et me souviens de tous les plats auxquels j’ai goûté même si j'aime les répertorier dans mon compendium.
-    Je cuisine pour l’expérience et non pour l’excellence. J’ai cependant toujours de quoi cuisiner sur moi même si mon alimentation se résume à des plats très modestes.
-    Je me bats à la serpe, mais elle sert surtout à récolter des herbes.</textarea>
+                <textarea id="traits" class="trait">
+                  J’ai vécu toute ma vie dans un village et ne connaît alors rien au monde.
+                  Je suis fascinée par tout ce que je croise et suis étonnée de tout et de rien à la fois. Les choses inhabituelles sont pour moi des événements communs.
+                  Je crois en la vérité et ne dis que la vérité sans aucun sens de la diplomatie ce qui m’a souvent amené aux problèmes.
+                  J’ai une excellente mémoire gustative et me souviens de tous les plats auxquels j’ai goûté même si j'aime les répertorier dans mon compendium.
+                  Je cuisine pour l’expérience et non pour l’excellence. J’ai cependant toujours de quoi cuisiner sur moi même si mon alimentation se résume à des plats très modestes.
+                  Je me bats à la serpe, mais elle sert surtout à récolter des herbes.
+                </textarea>
               </div><div class="tab5-4">
                 <p class="subrub">Idéaux</p>
-                <textarea id="ideaux" class="traits">Je veux être une bonne personne et ne faire que des actions justes selon ma morale.
-    J’ai beau être enfantine, je ne suis pas capricieuse pour ne rien devoir aux gens. Je donne sans recevoir afin de favoriser le bien être des autres avant le mien.</textarea>
+                <textarea id="ideaux" class="traits">
+                  Je veux être une bonne personne et ne faire que des actions justes selon ma morale.
+                  J’ai beau être enfantine, je ne suis pas capricieuse pour ne rien devoir aux gens. Je donne sans recevoir afin de favoriser le bien être des autres avant le mien.
+                </textarea>
               </div><div class="tab5-4">
                 <p class="subrub">Liens</p>
-                <textarea id="liens" class="traits">Rien n’est plus important que les personnes de mon village, ainsi que cette mystérieuse personne dont je suis la recherche.
-    Je partage toujours mon repas avec les plus démunis.</textarea>
+                <textarea id="liens" class="traits">
+                  Rien n’est plus important que les personnes de mon village, ainsi que cette mystérieuse personne dont je suis la recherche.
+                  Je partage toujours mon repas avec les plus démunis.
+                </textarea>
               </div><div class="tab5-4">
                 <p class="subrub">Défauts</p>
-                <textarea id="defauts" class="traits">Comme une enfant, je n’ai aucun sens du risque et me jette à corps perdu aux grands dangers.
-    La morale que je suis m’est propre et biaisée par ma vision du monde.
-    Si j’essaye de mentir car on m’y oblige, mes sourcils se froncent indépendamment du reste de mon visage.
-    Mon obsession me pousse à expérimenter ce qui n’est pas cuisinable, j’ai un talent pour dissimuler le plat le plus atroce sous la plus belle présentation.</textarea>
+                <textarea id="defauts" class="traits">
+                  Comme une enfant, je n’ai aucun sens du risque et me jette à corps perdu aux grands dangers.
+                  La morale que je suis m’est propre et biaisée par ma vision du monde.
+                  Si j’essaye de mentir car on m’y oblige, mes sourcils se froncent indépendamment du reste de mon visage.
+                  Mon obsession me pousse à expérimenter ce qui n’est pas cuisinable, j’ai un talent pour dissimuler le plat le plus atroce sous la plus belle présentation.
+                </textarea>
               </div>
               
             </div><div id="tab6" style="display:none">
     
               <div class="tab6-1">
                 <p class="subrub">Historique</p>
-                <textarea id="backLong">Artisan de guilde (Cuisiniers, boulangers)</textarea>
+                <textarea id="backLong">Cuisinier</textarea>
               </div><div class="tab6-2">
                 <p class="subrub">Histoire du personnage</p>
                 <textarea id="histoire"></textarea>
