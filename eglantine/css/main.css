@@ -1,10 +1,12 @@
 * 			{box-sizing:border-box; margin:0; padding:0; outline:none}
 html	 	{font-size:10px}
-body	 	{font-family:'Asap', sans-serif; background-repeat:no-repeat; background-attachment:fixed; background-position:center; background-size:cover; }
+body	 	{font-family:'Asap', sans-serif;}
+.page-main {background-repeat:no-repeat; background-attachment:fixed; background-position:center; background-size:cover;}
 hr	 		{display:block; clear:both; border:0}
 
 h2			{margin:10px 0 20px 0; font-size:2.2rem; color:rgb(69, 165, 152)}
 div			{vertical-align:top}
+ul			{list-style: none;}
 .col li		{padding:10px 0 0 5px; font-size:1.3rem; list-style-type:none}
 .col li a	{font-weight:bold}
 .col a:link, .col a:visited, .col a:hover {text-decoration:none; color:#b80000}
@@ -18,14 +20,14 @@ div			{vertical-align:top}
 .col4 {display:inline-block; width:33%;}
 
 .block {display:inline-block; vertical-align:bottom; padding:5px; width:100%; font-size:1.1rem}
-.blockCadre {border-image-source:url(sheet/border.png); border-image-slice:33% fill; border-image-width:100px 50px; background-color:rgba(0,0,0,0); padding:1.5vh 10px 2.5vh 10px; line-height:1rem}
+.blockCadre {border-image-source:url(/assets/img/sheet/border.png); border-image-slice:33% fill; border-image-width:100px 50px; background-color:rgba(0,0,0,0); padding:1.5vh 10px 2.5vh 10px; line-height:1rem}
 
 input[type=checkbox] {position:relative; top:2px; margin:0 0 0 9px}
 div.spells input[type=checkbox] {position:relative; top:3px; margin:0}
 
 .rub	{text-align:center; padding:8px 0 0 0px; font-size:1.2rem; font-weight:bold; color:#111; text-transform:uppercase}
 .subrub	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
-
+.tab__subtitle	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
 .textinput	{width:35%; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0 0 1px 0; border-color:rgba(200,200,200,0.5); background-color:rgba(0,0,0,0)}
 .small		{width:25px}
 .bonusinput {width:35px; padding:2px;			margin:0px  3px 1px 3px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0; background-color:rgba(0,0,0,0)}
@@ -62,38 +64,38 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 /* Ligne 2 */
 
 	.caracBack	{width:5.8%; height:13vh; margin:0 0.2% 0 0; padding-top:6px; text-align:center;
-				background-image:url(sheet/borderCarac.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderCarac.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.caracLeg	{display:block; width:100%; height:2.6vh; background-color:rgba(0,0,0,0)}
 	.caracMod	{display:block; width:100%; height:5.8vh; background-color:rgba(0,0,0,0); font-weight:bold}
 	.caracVal	{display:block; width:100%; height:3vh; background-color:rgba(0,0,0,0); padding-left:5px}
 	
 	.inspiBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0.5%; text-align:center;
-				background-image:url(sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.inspiration {font-size:3.0rem; padding:4px 0px 6px 2px}
 
 	.bonusBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
-				background-image:url(sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.bonusVal	{width:55px; margin:1vh 0 1vh 3px}
 
 	.CABack 	{width:5.5%; height:13vh; margin:0 0.5% 0 0; text-align:center;
-				background-image:url(sheet/borderCA.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderCA.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.CAVal		{width:50px; margin:2.5vh 0 0.5vh 0}
 	
 	.VitBack	{width:8.8%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
-				background-image:url(sheet/borderVit.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderVit.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.VitVal		{width:90px; margin:1vh 0 1vh 0}
 
 	.DVBack		{width:10.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
-				background-image:url(sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.DV1Val		{width:70px; margin:1vh 0 0 0; font-weight:bold}
 	.DV2Val		{width:30px; margin:1vh 0 0 0}
 
 	.pvBack		{width:13.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
-				background-image:url(sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.pvVal		{width:43px; margin:1vh 0 0 0}
 	
 	.deathBack	{width:11.2%; height:12vh; margin:0 0 .8vh 0; padding-top:10px; text-align:right;
-				background-image:url(sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(/assets/img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.deathBack input[type=checkbox] {position:relative; top:3px; margin:2px 0 5px 5px}
 	.deathBack input[type=checkbox].last {margin-right:16px}
 
@@ -110,7 +112,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 
 	.passive	{height:6vh; margin-bottom:1vh}
 		.blockPassive {margin-right:0.3%; text-align:left;
-						background-image:url(sheet/borderPerception.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+						background-image:url(/assets/img/sheet/borderPerception.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 		.passiveVal {width:25px; margin:10px 9% 0 4%}
 	.comp		{height:64vh}
 
@@ -134,7 +136,6 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	.materiel .tab1-2 {height:34vh}
 		#armesDetail {height:100%}
 	.materiel .tab2-1 {height:10vh}
-	.materiel .tab2-2 {height:30vh}
 		#equip		{height:88%}
 	.materiel .tab2-3 {height:21vh}
 		#tresors 	{height:100%}
