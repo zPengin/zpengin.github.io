@@ -1,0 +1,277 @@
+* 			{box-sizing:border-box; margin:0; padding:0; outline:none}
+html	 	{font-size:10px}
+body	 	{font-family:'Asap', sans-serif;}
+.page-main {background-repeat:no-repeat; background-attachment:fixed; background-position:center; background-size:cover;}
+hr	 		{display:block; clear:both; border:0}
+
+h2			{margin:10px 0 20px 0; font-size:2.2rem; color:rgb(69, 165, 152)}
+div			{vertical-align:top}
+ul			{list-style: none;}
+.col li		{padding:10px 0 0 5px; font-size:1.3rem; list-style-type:none}
+.col li a	{font-weight:bold}
+.col a:link, .col a:visited, .col a:hover {text-decoration:none; color:#b80000}
+
+.header {width:100%; height:13vh; background-color: #c6d7d3; color: #fff}
+.line2 {width:100%; height:15vh; padding:10px .5% 0 .5%}
+.line3 {height:71vh}
+.col1 {display:inline-block; width:15.5%; margin:0 .5% 0 .5%}
+.col2 {display:inline-block; width:16%; margin-right:.5%}
+.col3 {display:inline-block; width:33%; margin-right:.5%}
+.col4 {display:inline-block; width:33%;}
+
+.block {display:inline-block; vertical-align:bottom; padding:5px; width:100%; font-size:1.1rem}
+.blockCadre {border-image-source:url(../img/sheet/border.png); border-image-slice:33% fill; border-image-width:100px 50px; background-color:rgba(0,0,0,0); padding:1.5vh 10px 2.5vh 10px; line-height:1rem}
+
+input[type=checkbox] {position:relative; top:2px; margin:0 0 0 9px}
+div.spells input[type=checkbox] {position:relative; top:3px; margin:0}
+
+.rub	{text-align:center; padding:8px 0 0 0px; font-size:1.2rem; font-weight:bold; color:#111; text-transform:uppercase}
+.subrub	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
+.tab__subtitle	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
+.textinput	{width:35%; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0; background-color:rgba(0,0,0,0)}
+.small		{width:25px}
+.bonusinput {width:35px; padding:2px;			margin:0px  3px 1px 3px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0; background-color:rgba(0,0,0,0)}
+.xpinput	{width:90px; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0 0 1px 0; border-color:#F4F4F4; background-color:rgba(0,0,0,0)}
+.valinput 	{width:55%; padding:0; font-size:2.2rem; text-align:center; font-weight:bold; border: 0; background-color:rgba(0,0,0,0)}
+
+textarea, div.editable {border-width:0px; margin-bottom:5px; padding:0 5px 0 5px; resize:none; overflow-y:auto; width:100%; text-align:left; line-height:1.5rem; font-family:Verdana, Arial, sans-serif}
+textarea, div, table {font-size:1.1rem}
+
+button.plusmoins {width:20px; padding 4px}
+
+input.grimoire {margin-left:75px; padding:0 4px;}
+
+/* Header */
+
+	.header__content {display:inline-block; width:66%}
+		img.image 	{float:left; height:80px; width:80px; margin:6px;}
+		.nom		{					   font-size:3.0rem; padding:2px 0 0  6px; font-weight:bold}
+		.classerace {display:inline-block; font-size:2.0rem; padding:4px 0 0  0px; font-weight:bold}
+		.back		{					   font-size:1.6rem; padding:4px 0 0 12px; font-weight:bold}
+
+	.interface {display:inline-block; width:29%; font-family:Verdana, Arial, sans-serif; font-size:2.5rem}
+		#upload, #uimd, #ajax {display:inline-block}
+		#upload {}
+			#upload input {margin-top:5px; padding:2px 4px; cursor:pointer}
+		#privacity {font-size:1.1rem; margin-top:5px;}
+			input[type=radio] {margin:2px 0}
+			input#mymd {font-size:1.1rem; border-style:none; padding:1px 2px; width:120px}
+		#ajax	{font-size:1.1rem; margin-top:20px;}
+
+	.icones		{display:inline-block; width:5%; font-size:2.4rem; text-align:center}
+		.icones i {margin-top:7px; cursor:pointer}
+
+/* Ligne 2 */
+
+	.caracBack	{width:5.8%; height:13vh; margin:0 0.2% 0 0; padding-top:6px; text-align:center;
+		border: 1px solid #c6d7d3; background-color:#fff}
+	.caracLeg	{display:block; width:100%; height:2.6vh; background-color:rgba(0,0,0,0)}
+	.caracMod	{display:block; width:100%; height:5.8vh; background-color:rgba(0,0,0,0); font-weight:bold}
+	.caracVal	{display:block; width:100%; height:3vh; background-color:rgba(0,0,0,0); padding-left:5px}
+	
+	.inspiBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0.5%; text-align:center;
+				background-image:url(../img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.inspiration {font-size:3.0rem; padding:4px 0px 6px 2px}
+
+	.bonusBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
+				background-image:url(../img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.bonusVal	{width:55px; margin:1vh 0 1vh 3px}
+
+	.CABack 	{width:5.5%; height:13vh; margin:0 0.5% 0 0; text-align:center;
+				background-image:url(../img/sheet/borderCA.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.CAVal		{width:50px; margin:2.5vh 0 0.5vh 0}
+	
+	.VitBack	{width:8.8%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
+				background-image:url(../img/sheet/borderVit.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.VitVal		{width:90px; margin:1vh 0 1vh 0}
+
+	.DVBack		{width:10.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
+				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.DV1Val		{width:70px; margin:1vh 0 0 0; font-weight:bold}
+	.DV2Val		{width:30px; margin:1vh 0 0 0}
+
+	.pvBack		{width:13.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
+				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.pvVal		{width:43px; margin:1vh 0 0 0}
+	
+	.deathBack	{width:11.2%; height:12vh; margin:0 0 .8vh 0; padding-top:10px; text-align:right;
+				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+	.deathBack input[type=checkbox] {position:relative; top:3px; margin:2px 0 5px 5px}
+	.deathBack input[type=checkbox].last {margin-right:16px}
+
+/* Colonne 1 */
+
+	.jds		{height:25vh; margin-bottom:1vh}
+	.maitrises	{height:45vh}
+		#armes	 {height:20%}
+		#armures {height:15%}
+		#outils	 {height:15%}
+		#langues {height:20%}
+
+/* Colonne 2 */
+
+	.passive	{height:6vh; margin-bottom:1vh}
+		.blockPassive {margin-right:0.3%; text-align:left;
+						background-image:url(../img/sheet/borderPerception.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+		.passiveVal {width:25px; margin:10px 9% 0 4%}
+	.comp		{height:64vh}
+
+/* Colonne 3 */
+
+	.tab0	{height:4vh}
+	.menuTab1, .menuTab2 {font-size:1.1rem; margin:0 6px; font-weight:bold; color:#888; text-transform:uppercase; cursor:pointer}
+	.menuTabSelected {color:#111; border-bottom:2px solid #111}
+	#tab1, #tab2, #tab3, #tab4, #tab5, #tab6, #tab7 {padding:0px 3px 0 3px}
+
+	table {width:100%}
+	th {color:#444; font-weight:normal}
+	th.arme1 {width:37%}
+	th.arme2 {width:13%}
+	th.arme3 {width:50%}
+	td > input {padding:3px !important; text-align:center !important; width:100% !important; margin:0 !important; font-size:1.2rem !important}
+
+	.materiel {height:71vh}	/* -4 padding blockcadre -4 tab0 -4 margin bootom = 59 */
+	
+	.materiel .tab1-1 {height:25vh}
+	.materiel .tab1-2 {height:34vh}
+		#armesDetail {height:100%}
+	.materiel .tab2-1 {height:10vh}
+		#equip		{height:88%}
+	.materiel .tab2-3 {height:21vh}
+		#tresors 	{height:100%}
+	.materiel .tab3-1 {height:8vh}
+	.materiel .tab3-2 {height:55vh; overflow-y:scroll}
+	
+		.spellcaster{width:44%; margin-bottom:5px}
+		.incant		{display:inline-block; width:36%}
+		.incantVal	{width:8%; margin-bottom:5px}
+		.perso		{display:inline-block; width:17%}
+		.persoVal	{width:27%; margin-bottom:5px}
+		.lvl		{font-size:1.4rem; font-weight:bold}
+		.slot {width:15px; text-align:center}
+		.editable > a {cursor:pointer; text-decoration:none; font-weight:bold; color:#b80000}
+
+/* Colonne 4 */
+
+	.personnage {height:71vh}	/* -4 padding blockcadre -4 tab0 -4 margin bootom = 59 */
+
+	.personnage .tab4-1 {height:48vh}
+		#capacites 		{height:92%} 
+	.personnage .tab4-2 {height:13vh}
+		#capacitesExtra {height:96%}
+	
+	.personnage .tab5-1 {height:15vh}
+	.personnage .tab5-2 {height:16vh}
+	#apparence	{height:82%}
+	.personnage .tab5-3 {height:8vh}
+	#traits		{height:65%}
+	.personnage .tab5-4 {height:8vh}
+	#ideaux		{height:65%}
+	#liens		{height:65%}
+	#defauts	{height:65%}
+
+	.personnage .tab6-1 {height:11vh}
+		#backLong	{height:66%}
+	.personnage .tab6-2 {height:30vh}
+		#histoire	{height:88%}
+	.personnage .tab6-3 {height:20vh} 
+		#allies		{height:96%}
+
+	#notes 		{height:55.8vh}
+
+	.alerte {color:black; animation:highlight 2s}
+
+@media only screen and (max-width:1199px)
+{
+	.header		{width:65%}
+		.nom		{font-size:2.6rem; padding:0}
+		.classerace {font-size:1.8rem; padding:8px 0 0 0}
+		.back		{font-size:1.5rem; padding:8px 0 0 0}
+	.interface	{width:29%}
+	.icones		{width:6%}
+
+	.header {height:auto}
+	.line2 {height:auto}
+	.line3 {height:auto}
+
+	.col1	{width:48.5%; margin:0 .5% 10px 1%}
+	.col2	{width:48.5%; margin:0 1% 10px .5%}
+	.col3	{width:98%; margin:0 1% 10px 1%}
+	.col4	{width:98%; margin:0 1% 10px 1%}
+
+	h2			{margin:5px 0 0px 0}
+	textarea, div, table {font-size:1.3rem}
+
+	.caracBack 	{width:12%; margin-right:.5%}
+	.inspiBack 	{width:11.5%}
+	.bonusBack 	{width:11.5%}
+	.CABack		{width:12%}
+	.VitBack	{width:17%}
+	.DVBack		{width:20%}
+	.pvBack		{width:27%}
+	.deathBack 	{width:21%}
+
+	.jds, .percep, .comp {font-size:1.3rem}
+	.passiveVal {margin:11px 12.5% 0 5%}
+}
+
+@media only screen and (max-width:699px)
+{
+	.nocel	{display:none}
+
+	.header {width:90%; padding:4px}
+		.nom		{font-size:2.2rem; padding:0}
+		.classerace {font-size:1.4rem; padding:4px 0 0 0}
+		.back		{font-size:1.4rem; padding:4px 0 0 0}
+
+	.icones	{width:10%}
+
+	.header	{position:sticky; position:-webkit-sticky; top:0; background-color:black; z-index:1}
+	.line2	{margin-bottom:5px}
+
+	.col1	{width:98%; margin:0 1% 5px 1%}
+	.col2	{width:98%; margin:0 1% 5px 1%}
+	.col3	{width:98%; margin:0 1% 5px 1%}  
+	.col4	{width:98%; margin:0 1% 5px 1%}
+
+	.caracBack 	{width:24%; margin-right:1%}
+	.inspiBack 	{width:23%; margin-right:1%}
+	.bonusBack 	{width:24%; margin-right:1%}
+	.CABack		{width:23%; margin:0 1% 0 1%}
+	.VitBack	{width:31%; margin-right:1%}
+	.DVBack		{width:42%; margin:0 1% 7px 0}
+	.pvBack		{width:55%; margin:0 1% 0 1%}
+	.deathBack 	{width:42%; margin:0 1% 0 0}
+
+	.jds, .percep, .comp {font-size:1.3rem}
+	.jds		{height:24vh; margin-bottom:5px}
+	.passiveVal {margin:15px 12.5% 0px 5%}
+	.comp		{height:60vh; margin-bottom:5px}
+
+	.materiel, .personnage {height:85vh} /* -5 padding blockcadre -2 menu -2 marge-bottom menu = 76 */
+	
+	.personnage .tab4-1 {height:56vh}	/* 76 */
+		#capacites 		{height:94%} 
+	.personnage .tab4-2 {height:20vh}
+		#capacitesExtra {height:92%}
+	
+	.personnage .tab5-1 {height:15vh}	/* 77 ! */
+	.personnage .tab5-2 {height:21vh}
+	#apparence	{height:85%}
+	.personnage .tab5-3 {height:14vh}
+	#traits		{height:76%}
+	.personnage .tab5-4 {height:9vh}
+	#ideaux		{height:66%}
+	#liens		{height:66%}
+	#defauts	{height:66%}
+
+	.personnage .tab6-1 {height:15vh}	/* 76 */
+		#backLong	{height:76%}
+	.personnage .tab6-2 {height:38vh}
+		#histoire	{height:90%}
+	.personnage .tab6-3 {height:23vh} 
+		#allies		{height:90%}
+
+	#notes 		{height:71vh}
+
+}
