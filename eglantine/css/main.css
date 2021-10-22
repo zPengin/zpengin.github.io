@@ -20,7 +20,7 @@ ul			{list-style: none;}
 .col4 {display:inline-block; width:33%;}
 
 .block {display:inline-block; vertical-align:bottom; padding:5px; width:100%; font-size:1.1rem}
-.blockCadre {border-image-source:url(/assets/img/sheet/border.png); border-image-slice:33% fill; border-image-width:100px 50px; background-color:rgba(0,0,0,0); padding:1.5vh 10px 2.5vh 10px; line-height:1rem}
+.blockCadre {border-image-source:url(../img/sheet/border.png); border-image-slice:33% fill; border-image-width:100px 50px; background-color:rgba(0,0,0,0); padding:1.5vh 10px 2.5vh 10px; line-height:1rem}
 
 input[type=checkbox] {position:relative; top:2px; margin:0 0 0 9px}
 div.spells input[type=checkbox] {position:relative; top:3px; margin:0}
@@ -64,38 +64,38 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 /* Ligne 2 */
 
 	.caracBack	{width:5.8%; height:13vh; margin:0 0.2% 0 0; padding-top:6px; text-align:center;
-				background-image:url(/assets/img/sheet/borderCarac.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderCarac.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.caracLeg	{display:block; width:100%; height:2.6vh; background-color:rgba(0,0,0,0)}
 	.caracMod	{display:block; width:100%; height:5.8vh; background-color:rgba(0,0,0,0); font-weight:bold}
 	.caracVal	{display:block; width:100%; height:3vh; background-color:rgba(0,0,0,0); padding-left:5px}
 	
 	.inspiBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0.5%; text-align:center;
-				background-image:url(/assets/img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.inspiration {font-size:3.0rem; padding:4px 0px 6px 2px}
 
 	.bonusBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
-				background-image:url(/assets/img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.bonusVal	{width:55px; margin:1vh 0 1vh 3px}
 
 	.CABack 	{width:5.5%; height:13vh; margin:0 0.5% 0 0; text-align:center;
-				background-image:url(/assets/img/sheet/borderCA.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderCA.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.CAVal		{width:50px; margin:2.5vh 0 0.5vh 0}
 	
 	.VitBack	{width:8.8%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
-				background-image:url(/assets/img/sheet/borderVit.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderVit.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.VitVal		{width:90px; margin:1vh 0 1vh 0}
 
 	.DVBack		{width:10.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
-				background-image:url(/assets/img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.DV1Val		{width:70px; margin:1vh 0 0 0; font-weight:bold}
 	.DV2Val		{width:30px; margin:1vh 0 0 0}
 
 	.pvBack		{width:13.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
-				background-image:url(/assets/img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.pvVal		{width:43px; margin:1vh 0 0 0}
 	
 	.deathBack	{width:11.2%; height:12vh; margin:0 0 .8vh 0; padding-top:10px; text-align:right;
-				background-image:url(/assets/img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.deathBack input[type=checkbox] {position:relative; top:3px; margin:2px 0 5px 5px}
 	.deathBack input[type=checkbox].last {margin-right:16px}
 
@@ -112,7 +112,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 
 	.passive	{height:6vh; margin-bottom:1vh}
 		.blockPassive {margin-right:0.3%; text-align:left;
-						background-image:url(/assets/img/sheet/borderPerception.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
+						background-image:url(../img/sheet/borderPerception.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 		.passiveVal {width:25px; margin:10px 9% 0 4%}
 	.comp		{height:64vh}
 
