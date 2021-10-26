@@ -15,6 +15,9 @@
 	<script src="/eglantine/js/jquery.min.js"></script>
 	<script src="/eglantine/js/fonctionsSheet.js"></script>
   <link rel="stylesheet" href="/eglantine/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Playfair+Display&display=swap" rel="stylesheet">
 	<link href="/eglantine/css/all.min.css" rel="stylesheet">
 	<link href="/eglantine/css/main.css" rel="stylesheet" type="text/css">
   <link type="application/atom+xml" rel="alternate" href="/eglantinefeed.xml"
@@ -26,8 +29,17 @@
 
             <main role="main">
                 <div class="page__container">
-
-                    <style type="text/css" media="screen">
+                    <div class="page-main">
+                        <div class="header">
+                          <div class="header__content">
+                            <img class="image nocel" src="/eglantine/img/avatar.png" width="100" height="100" alt="" title="Click here to change the picture (jpg or png ; 100x100 pixels)" onclick="image()">
+                            <div id="nom" contenteditable="true" class="nom">Eglantine Feuilledethé</div>
+                            <div id="classe" contenteditable="true" class="classerace">Clerc (lumière) 1</div>
+                            <div id="race" contenteditable="true" class="classerace">Halfelin robuste (f)</div>
+                            <div id="backShort" contenteditable="true" class="back">Cuisinier</div>
+                          </div>
+                        </div>
+                        <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -48,6 +60,7 @@
   <p>The requested page could not be found.</p>
 </div>
 
+                      </div>
 
                 </div><!--end l-container-->
             </main><!--end role=main-->

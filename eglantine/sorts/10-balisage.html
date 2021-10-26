@@ -15,6 +15,9 @@
 	<script src="/eglantine/js/jquery.min.js"></script>
 	<script src="/eglantine/js/fonctionsSheet.js"></script>
   <link rel="stylesheet" href="/eglantine/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Playfair+Display&display=swap" rel="stylesheet">
 	<link href="/eglantine/css/all.min.css" rel="stylesheet">
 	<link href="/eglantine/css/main.css" rel="stylesheet" type="text/css">
   <link type="application/atom+xml" rel="alternate" href="/eglantinefeed.xml"
@@ -26,8 +29,17 @@
 
             <main role="main">
                 <div class="page__container">
-
-                    <article class="single-sort">
+                    <div class="page-main">
+                        <div class="header">
+                          <div class="header__content">
+                            <img class="image nocel" src="/eglantine/img/avatar.png" width="100" height="100" alt="" title="Click here to change the picture (jpg or png ; 100x100 pixels)" onclick="image()">
+                            <div id="nom" contenteditable="true" class="nom">Eglantine Feuilledethé</div>
+                            <div id="classe" contenteditable="true" class="classerace">Clerc (lumière) 1</div>
+                            <div id="race" contenteditable="true" class="classerace">Halfelin robuste (f)</div>
+                            <div id="backShort" contenteditable="true" class="back">Cuisinier</div>
+                          </div>
+                        </div>
+                        <article class="single-sort">
 	<div class="single-sort__content" itemprop="articleBody">
 		<h1>10 Balisage</h1>
 		<p><em>niveau 1 - évocation</em></p>
@@ -38,6 +50,7 @@
 		<p>Un rayon de lumière frappe une créature de votre choix située à portée. Faites un jet d'attaque de sort à distance contre elle. Si vous le réussissez, elle subit 4d6 dégâts radiants et scintille d'une faible lumière mystique jusqu'à la fin de votre prochain tour. D'ici là et grâce à cette lueur, le prochain jet d'attaque effectué contre elle bénéficie d'un avantage. À plus haut niveau. Si vous lancez ce sort en utilisant un emplacement de niveau 2 ou supérieur, les dégâts augmentent de 1d6 par niveau au-delà du niveau 1.</p>
 	</div>
 </article>
+                      </div>
 
                 </div><!--end l-container-->
             </main><!--end role=main-->
