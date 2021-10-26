@@ -18,7 +18,9 @@ ul { list-style: none; }
 
 .col a:link, .col a:visited, .col a:hover { text-decoration: none; color: #b80000; }
 
-.header { width: 100%; height: 13vh; background-color: #c6d7d3; color: #fff; }
+.header { display: block; width: 100%; height: 13vh; background-color: #c6d7d3; color: #fff; }
+
+.header__menu { display: inline-flex; flex-direction: column; justify-self: flex-end; }
 
 .line2 { width: 100%; height: 15vh; padding: 10px .5% 0 .5%; }
 
@@ -32,17 +34,15 @@ ul { list-style: none; }
 
 .col4 { display: inline-block; width: 33%; }
 
-.block { display: inline-block; vertical-align: bottom; padding: 5px; width: 100%; font-size: 1.1rem; }
-
 .blockCadre { border: 2px solid #c6d7d3; background-color: rgba(255, 255, 255, 0.5); padding: 1.5vh 10px 2.5vh 10px; line-height: 1rem; }
 
 input[type=checkbox] { position: relative; top: 2px; margin: 0 0 0 9px; }
 
 div.spells input[type=checkbox] { position: relative; top: 3px; margin: 0; }
 
-.rub { text-align: center; padding: 8px 0 0 0px; font-size: 1.2rem; font-weight: bold; color: #111; text-transform: uppercase; }
+.title { text-align: center; padding: 8px 0 0 0px; font-size: 16px; font-weight: bold; color: #111; font-family: "Playfair Display", serif; }
 
-.subrub { padding-bottom: 6px; font-size: 1.1rem; font-weight: bold; color: #888; text-transform: uppercase; }
+.subtitle { padding-bottom: 6px; font-size: 1.1rem; font-weight: bold; color: #888; text-transform: uppercase; }
 
 .tab__subtitle { padding-bottom: 6px; font-size: 1.1rem; font-weight: bold; color: #888; text-transform: uppercase; }
 
@@ -112,42 +112,38 @@ input#mymd { font-size: 1.1rem; border-style: none; padding: 1px 2px; width: 120
 /* ========= DETAILS ========= */
 .details { background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover; width: 90vw; }
 
-/* Ligne 2 */
-.caracBack { width: 5.8%; height: 13vh; margin: 0 0.2% 0 0; padding-top: 6px; text-align: center; background-image: url(../img/sheet/frame-square.svg); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+/* INFOS 2 */
+.infos { display: flex; align-items: center; padding: 8px; }
 
-.caracLeg { display: block; width: 100%; height: 2.6vh; background-color: rgba(0, 0, 0, 0); }
+.info { position: relative; width: 100px; height: 100px; padding: 16px; text-align: center; }
 
-.caracMod { display: block; width: 100%; height: 5.8vh; background-color: rgba(0, 0, 0, 0); font-weight: bold; }
+.info:before { content: ''; display: block; position: absolute; top: 0; bottom: 0; left: -16px; width: 100px; height: 100%; background-image: url(../img/sheet/border-left.svg); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; }
 
-.caracVal { display: block; width: 100%; height: 3vh; background-color: rgba(0, 0, 0, 0); padding-left: 5px; }
+.info:after { content: ''; display: block; position: absolute; top: 0; bottom: 0; right: -16px; width: 100px; height: 100%; background-image: url(../img/sheet/border-right.svg); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; }
 
-.inspiBack { width: 5.5%; height: 10vh; margin: 0 0.5% 2vh 0.5%; text-align: center; background-image: url(../img/sheet/borderBonus.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.info__value { font-family: "Patrick Hand SC", cursive; font-size: 24px; }
 
-.inspiration { font-size: 3.0rem; padding: 4px 0px 6px 2px; }
+.info__title { font-family: "Playfair Display", serif; font-size: 16px; margin-top: 8px; }
 
-.bonusBack { width: 5.5%; height: 10vh; margin: 0 0.5% 2vh 0; text-align: center; background-image: url(../img/sheet/borderBonus.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.ca { width: 14.5%; height: 10vh; margin: 0 0.5% 0 0; text-align: center; padding: 16px 16px; background-image: url(../img/sheet/frame-plant.svg); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
 
-.bonusVal { width: 55px; margin: 1vh 0 1vh 3px; }
+.ca__title { font-family: "Playfair Display", serif; font-size: 16px; }
 
-.CABack { width: 5.5%; height: 13vh; margin: 0 0.5% 0 0; text-align: center; background-image: url(../img/sheet/borderCA.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.ca__value { font-family: "Patrick Hand SC", cursive; font-size: 24px; }
 
-.CAVal { width: 50px; margin: 2.5vh 0 0.5vh 0; }
+.pvInfo { width: 13.5%; height: 12vh; margin: 0 0.5% .8vh 0; text-align: center; border: 2px solid #c6d7d3; border-bottom: 8px solid #c6d7d3; }
 
-.VitBack { width: 8.8%; height: 10vh; margin: 0 0.5% 2vh 0; text-align: center; background-image: url(../img/sheet/borderVit.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.pvInfo__title { font-family: "Playfair Display", serif; font-size: 16px; }
 
-.VitVal { width: 90px; margin: 1vh 0 1vh 0; }
+.pvInfo__subtitle { font-family: "Playfair Display", serif; font-size: 12px; }
 
-.DVBack { width: 10.5%; height: 12vh; margin: 0 0.5% .8vh 0; text-align: center; background-image: url(../img/sheet/borderLarge.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.pvInfo__value { font-family: "Patrick Hand SC", cursive; font-size: 24px; }
 
-.DV1Val { width: 70px; margin: 1vh 0 0 0; font-weight: bold; }
+.pvInfo__value--1 { width: 70px; margin: 1vh 0 0 0; font-weight: bold; }
 
-.DV2Val { width: 30px; margin: 1vh 0 0 0; }
+.pvInfo__value--2 { width: 30px; margin: 1vh 0 0 0; }
 
-.pvBack { width: 13.5%; height: 12vh; margin: 0 0.5% .8vh 0; text-align: center; background-image: url(../img/sheet/borderLarge.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
-
-.pvVal { width: 43px; margin: 1vh 0 0 0; }
-
-.deathBack { width: 11.2%; height: 12vh; margin: 0 0 .8vh 0; padding-top: 10px; text-align: right; background-image: url(../img/sheet/borderLarge.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.pvInfo:last-of-type { padding-top: 20px; }
 
 .deathBack input[type=checkbox] { position: relative; top: 3px; margin: 2px 0 5px 5px; }
 
@@ -167,11 +163,11 @@ input#mymd { font-size: 1.1rem; border-style: none; padding: 1px 2px; width: 120
 #langues { height: 20%; }
 
 /* Colonne 2 */
-.passive { height: 6vh; margin-bottom: 1vh; }
+.passive { display: flex; align-items: center; height: 6vh; margin-bottom: 1vh; }
 
-.blockPassive { margin-right: 0.3%; text-align: left; background-image: url(../img/sheet/borderPerception.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); }
+.passive__value { display: inline-flex; align-items: center; justify-content: center; width: 70px; height: 70px; background-image: url(../img/sheet/circle.svg); background-size: 100% 100%; background-repeat: no-repeat; background-position: top center; background-color: rgba(0, 0, 0, 0); font-family: "Patrick Hand SC", cursive; font-size: 24px; }
 
-.passiveVal { width: 25px; margin: 10px 9% 0 4%; }
+.passive__title { font-family: "Playfair Display", serif; font-size: 16px; padding-left: 8px; }
 
 .comp { height: 64vh; }
 
@@ -279,7 +275,7 @@ td > input { padding: 3px !important; text-align: center !important; width: 100%
 
 .alerte { color: black; animation: highlight 2s; }
 
-@media only screen and (max-width: 1199px) { .header { width: 65%; } .nom { font-size: 2.6rem; padding: 0; } .classerace { font-size: 1.8rem; padding: 8px 0 0 0; } .back { font-size: 1.5rem; padding: 8px 0 0 0; } .interface { width: 29%; } .icones { width: 6%; } .header { height: auto; } .line2 { height: auto; } .line3 { height: auto; } .col1 { width: 48.5%; margin: 0 .5% 10px 1%; } .col2 { width: 48.5%; margin: 0 1% 10px .5%; } .col3 { width: 98%; margin: 0 1% 10px 1%; } .col4 { width: 98%; margin: 0 1% 10px 1%; } h2 { margin: 5px 0 0px 0; } textarea, div, table { font-size: 1.3rem; } .caracBack { width: 12%; margin-right: .5%; } .inspiBack { width: 11.5%; } .bonusBack { width: 11.5%; } .CABack { width: 12%; } .VitBack { width: 17%; } .DVBack { width: 20%; } .pvBack { width: 27%; } .deathBack { width: 21%; } .jds, .percep, .comp { font-size: 1.3rem; } .passiveVal { margin: 11px 12.5% 0 5%; } }
+@media only screen and (max-width: 1199px) { .header { width: 65%; } .nom { font-size: 2.6rem; padding: 0; } .classerace { font-size: 1.8rem; padding: 8px 0 0 0; } .back { font-size: 1.5rem; padding: 8px 0 0 0; } .interface { width: 29%; } .icones { width: 6%; } .header { height: auto; } .infos { height: auto; } .line3 { height: auto; } .col1 { width: 48.5%; margin: 0 .5% 10px 1%; } .col2 { width: 48.5%; margin: 0 1% 10px .5%; } .col3 { width: 98%; margin: 0 1% 10px 1%; } .col4 { width: 98%; margin: 0 1% 10px 1%; } h2 { margin: 5px 0 0px 0; } textarea, div, table { font-size: 1.3rem; } .caracBack { width: 12%; margin-right: .5%; } .inspiBack { width: 11.5%; } .bonusBack { width: 11.5%; } .CABack { width: 12%; } .VitBack { width: 17%; } .DVBack { width: 20%; } .pvBack { width: 27%; } .deathBack { width: 21%; } .jds, .percep, .comp { font-size: 1.3rem; } .passiveVal { margin: 11px 12.5% 0 5%; } }
 
 @media only screen and (max-width: 699px) { .nocel { display: none; } .header { width: 90%; padding: 4px; } .nom { font-size: 2.2rem; padding: 0; } .classerace { font-size: 1.4rem; padding: 4px 0 0 0; } .back { font-size: 1.4rem; padding: 4px 0 0 0; } .icones { width: 10%; } .header { position: sticky; position: -webkit-sticky; top: 0; background-color: black; z-index: 1; } .line2 { margin-bottom: 5px; } .col1 { width: 98%; margin: 0 1% 5px 1%; } .col2 { width: 98%; margin: 0 1% 5px 1%; } .col3 { width: 98%; margin: 0 1% 5px 1%; } .col4 { width: 98%; margin: 0 1% 5px 1%; } .caracBack { width: 24%; margin-right: 1%; } .inspiBack { width: 23%; margin-right: 1%; } .bonusBack { width: 24%; margin-right: 1%; } .CABack { width: 23%; margin: 0 1% 0 1%; } .VitBack { width: 31%; margin-right: 1%; } .DVBack { width: 42%; margin: 0 1% 7px 0; } .pvBack { width: 55%; margin: 0 1% 0 1%; } .deathBack { width: 42%; margin: 0 1% 0 0; } .jds, .percep, .comp { font-size: 1.3rem; } .jds { height: 24vh; margin-bottom: 5px; } .passiveVal { margin: 15px 12.5% 0px 5%; } .comp { height: 60vh; margin-bottom: 5px; } .materiel, .personnage { height: 85vh; } /* -5 padding blockcadre -2 menu -2 marge-bottom menu = 76 */ .personnage .tab4-1 { height: 56vh; } /* 76 */ #capacites { height: 94%; } .personnage .tab4-2 { height: 20vh; } #capacitesExtra { height: 92%; } .personnage .tab5-1 { height: 15vh; } /* 77 ! */ .personnage .tab5-2 { height: 21vh; } #apparence { height: 85%; } .personnage .tab5-3 { height: 14vh; } #traits { height: 76%; } .personnage .tab5-4 { height: 9vh; } #ideaux { height: 66%; } #liens { height: 66%; } #defauts { height: 66%; } .personnage .tab6-1 { height: 15vh; } /* 76 */ #backLong { height: 76%; } .personnage .tab6-2 { height: 38vh; } #histoire { height: 90%; } .personnage .tab6-3 { height: 23vh; } #allies { height: 90%; } #notes { height: 71vh; } }
 

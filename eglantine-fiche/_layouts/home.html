@@ -19,31 +19,36 @@ layout: default
     {% endfor %}
   </div>
   <div class="details" style="background-image:url({{ "/img" | prepend: site.baseurl }}/background.jpg)">
-    <div class="line2">
-      <div class="block bonusBack">
-        <input id="bonusMait" class="valinput bonusVal" maxlength="3" value="+2">
-        <br>Maîtrise<br>&nbsp;
-      </div><div class="block CABack">
-        <input id="CA" class="valinput CAVal" maxlength="4" value="16">
-        <br>CA<br>&nbsp;
-      </div><div class="block VitBack">
-        <input id="vit" class="valinput VitVal" maxlength="7" value="7,50 m">
-        <br>Vitesse<br>&nbsp;
-      </div><div class="block DVBack">
-        <p>Total &nbsp; &nbsp; Utilisés</p>
-        <input id="DV" class="valinput DV1Val" maxlength="5" value="1d8"> /
-        <input id="DV_used" class="valinput DV2Val" maxlength="2" value="0">
-        <p class="rub">Dés de vie</p>
-      </div><div class="block pvBack">
-        <p>max &nbsp; &nbsp; actuels &nbsp; &nbsp; temp</p>
-        <input id="pv" class="valinput pvVal" maxlength="3" value="10"> /
-        <input id="pv_used" class="valinput pvVal" maxlength="3" value="10"> /
-        <input id="pv_temp" class="valinput pvVal" maxlength="3" value="0">
-        <p class="rub">Points de vie</p>
-      </div><div class="block deathBack">
-        Succès <input type="checkbox"><input type="checkbox"><input type="checkbox" class="last"><br>
-        &nbsp;Échecs <input type="checkbox"><input type="checkbox"><input type="checkbox" class="last">
-        <p class="rub">JdS contre la mort</p>
+    <div class="infos">
+      <div class="block info">
+        <span class="info__value">+2</span>
+        <p class="info__title">Maîtrise</p>
+      </div>
+      <div class="block ca">
+        <span class="ca__value">16</span>
+        <p class="ca__title">CA<span>
+      </div>
+      <div class="block info">
+        <span class="info__value">7,50 m</span>
+        <p class="info__title">Vitesse</p>
+      </div>
+      <div class="block pvInfo">
+        <p class="pvInfo__subtitle">Total &nbsp; &nbsp; Utilisés</p>
+        <span class="pvInfo__value pvInfo__value--1">1d8</span> /
+        <span class="pvInfo__value pvInfo__value--2">0</span>
+        <p class="pvInfo__title">Dés de vie</p>
+      </div>
+      <div class="block pvInfo">
+        <p class="pvInfo__subtitle">max &nbsp; &nbsp; actuels &nbsp; &nbsp; temp</p>
+        <span class="pvInfo__value">10</span> /
+        <span class="pvInfo__value">10</span> /
+        <span class="pvInfo__value">0</span>
+        <p class="pvInfo__title">Points de vie</p>
+      </div>
+      <div class="block pvInfo">
+        <span class="pvInfo__subtitle">Succès</span> <input type="checkbox"><input type="checkbox"><input type="checkbox" class="last"><br>
+        <span class="pvInfo__subtitle">Échecs</span> <input type="checkbox"><input type="checkbox"><input type="checkbox" class="last">
+        <p class="pvInfo__title">JdS contre la mort</p>
       </div>
       
     </div>
@@ -52,21 +57,22 @@ layout: default
       <div class="col1">
   
         <div class="blockCadre jds">
-        <input id="jdsMait0" type="checkbox"><input id="jdsBonus0" class="bonusinput" maxlength="3" value="+1">Force<br><input id="jdsMait1" type="checkbox"><input id="jdsBonus1" class="bonusinput" maxlength="3" value="+3">Dextérité<br><input id="jdsMait2" type="checkbox"><input id="jdsBonus2" class="bonusinput" maxlength="3" value="+2">Constitution<br><input id="jdsMait3" type="checkbox"><input id="jdsBonus3" class="bonusinput" maxlength="3" value="+0">Intelligence<br><input id="jdsMait4" type="checkbox" checked="checked"><input id="jdsBonus4" class="bonusinput" maxlength="3" value="+6">Sagesse<br><input id="jdsMait5" type="checkbox" checked="checked"><input id="jdsBonus5" class="bonusinput" maxlength="3" value="+3">Charisme<br>				<p class="rub">Jets de sauvegarde</p>
+        <input id="jdsMait0" type="checkbox"><input id="jdsBonus0" class="bonusinput" maxlength="3" value="+1">Force<br><input id="jdsMait1" type="checkbox"><input id="jdsBonus1" class="bonusinput" maxlength="3" value="+3">Dextérité<br><input id="jdsMait2" type="checkbox"><input id="jdsBonus2" class="bonusinput" maxlength="3" value="+2">Constitution<br><input id="jdsMait3" type="checkbox"><input id="jdsBonus3" class="bonusinput" maxlength="3" value="+0">Intelligence<br><input id="jdsMait4" type="checkbox" checked="checked"><input id="jdsBonus4" class="bonusinput" maxlength="3" value="+6">Sagesse<br><input id="jdsMait5" type="checkbox" checked="checked"><input id="jdsBonus5" class="bonusinput" maxlength="3" value="+3">Charisme<br>				<p class="title">Jets de sauvegarde</p>
               
         </div><div class="blockCadre maitrises">
-          <span class="subrub">&nbsp;&nbsp;Armes</span><br><textarea id="armes">armes courantes</textarea>
-          <span class="subrub">&nbsp;&nbsp;Armures</span><br><textarea id="armures">armures légères et intermédiaires, boucliers</textarea>
-          <span class="subrub">&nbsp;&nbsp;Outils</span><br><textarea id="outils">ustensiles de cuisinier</textarea>
-          <span class="subrub">&nbsp;&nbsp;Langues</span><br><textarea id="langues">commun, halfelin</textarea>
-          <p class="rub">Maîtrises et Langues</p>		
+          <span class="subtitle">&nbsp;&nbsp;Armes</span><br><textarea id="armes">armes courantes</textarea>
+          <span class="subtitle">&nbsp;&nbsp;Armures</span><br><textarea id="armures">armures légères et intermédiaires, boucliers</textarea>
+          <span class="subtitle">&nbsp;&nbsp;Outils</span><br><textarea id="outils">ustensiles de cuisinier</textarea>
+          <span class="subtitle">&nbsp;&nbsp;Langues</span><br><textarea id="langues">commun, halfelin</textarea>
+          <p class="title">Maîtrises et Langues</p>		
         </div>
   
       </div>
       <div class="col2">
   
         <div class="blockPassive passive">
-          <input id="percPass" class="bonusinput passiveVal" maxlength="2" value="14">Sagesse (Perception) passive
+          <span class="passive__value">14</span>
+          <span class="passive__title">Sagesse (Perception) passive</span>
         </div>
         <div class="blockCadre comp">
           <ul>
@@ -74,7 +80,7 @@ layout: default
             <li><input id="compMait0" type="checkbox" {% if skill.checked == true %}checked="checked" {% endif %}><input id="compBonus0" class="bonusinput" maxlength="3" value="{{skill.modifier}}">{{skill.title}}</li>
             {% endfor %}
           </ul>
-          <p class="rub">Compétences</p>
+          <p class="title">Compétences</p>
         </div>
   
       </div>
@@ -94,13 +100,13 @@ layout: default
             <div class="tab1-1">
               Initiative <input id="init" class="textinput" maxlength="4" value="+3">
   
-              <p class="subrub"><br>Armes</p>
+              <p class="subtitle"><br>Armes</p>
               <table>
                 <tbody><tr><th class="arme1">Nom</th><th class="arme2">Att</th><th class="arme3">Dégâts/Type</th></tr>
               <tr><td><input id="arme0nom" class="textinput" maxlength="24" value="Serpe"></td><td><input id="arme0att" class="textinput" maxlength="6" value="+3"></td><td><input id="arme0dg" class="textinput" maxlength="32" value="1d4+1 tranchant"></td></tr><tr><td><input id="arme1nom" class="textinput" maxlength="24" value="Arbalète légère"></td><td><input id="arme1att" class="textinput" maxlength="6" value="+5"></td><td><input id="arme1dg" class="textinput" maxlength="32" value="1d8+3 perforant"></td></tr><tr><td><input id="arme2nom" class="textinput" maxlength="24" value=""></td><td><input id="arme2att" class="textinput" maxlength="6" value=""></td><td><input id="arme2dg" class="textinput" maxlength="32" value=""></td></tr><tr><td><input id="arme3nom" class="textinput" maxlength="24" value=""></td><td><input id="arme3att" class="textinput" maxlength="6" value=""></td><td><input id="arme3dg" class="textinput" maxlength="32" value=""></td></tr>						</tbody></table>
             </div>
             <div class="tab1-2">
-              <p class="subrub"><br>Détails</p>
+              <p class="subtitle"><br>Détails</p>
               <textarea id="armesDetail">Serpe. Corps à corps :  +3 (1d4+1 tranchant ; légère)
   
               Arbalète légère. Distance :  +5 (1d8+3 perforant ; munitions (portée 24 m/96 m), chargement, à deux mains)
@@ -147,7 +153,7 @@ layout: default
               <div class="incant">Bonus d'attaque avec un sort</div><input id="bonusSort" class="textinput incantVal" maxlength="4" value="+6">
             </div><div class="tab3-2">
               <form name="formSorts" method="post" target="_blank">
-                <p class="subrub">Sorts mineurs</p>
+                <p class="subtitle">Sorts mineurs</p>
                 <div id="sorts0">
                   {% for sort in site.sorts %}
                     {% if sort.parent == "tours" %}

@@ -19,7 +19,18 @@ ul			{list-style: none;}
 .col li a	{font-weight:bold}
 .col a:link, .col a:visited, .col a:hover {text-decoration:none; color:#b80000}
 
-.header {width:100%; height:13vh; background-color: #c6d7d3; color: #fff}
+.header {
+	display: block;
+	width:100%;
+	height:13vh;
+	background-color: #c6d7d3;
+	color: #fff;
+	&__menu {
+		display: inline-flex;
+		flex-direction: column;
+		justify-self: flex-end;
+	}
+}
 .line2 {width:100%; height:15vh; padding:10px .5% 0 .5%}
 .line3 {height:71vh}
 .col1 {display:inline-block; width:15.5%; margin:0 .5% 0 .5%}
@@ -27,7 +38,6 @@ ul			{list-style: none;}
 .col3 {display:inline-block; width:33%; margin-right:.5%}
 .col4 {display:inline-block; width:33%;}
 
-.block {display:inline-block; vertical-align:bottom; padding:5px; width:100%; font-size:1.1rem}
 .blockCadre {
 	border: 2px solid $green;
 	background-color:rgba(255,255,255, 0.5);
@@ -38,8 +48,15 @@ ul			{list-style: none;}
 input[type=checkbox] {position:relative; top:2px; margin:0 0 0 9px}
 div.spells input[type=checkbox] {position:relative; top:3px; margin:0}
 
-.rub	{text-align:center; padding:8px 0 0 0px; font-size:1.2rem; font-weight:bold; color:#111; text-transform:uppercase}
-.subrub	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
+.title	{
+	text-align:center;
+	padding:8px 0 0 0px;
+	font-size: 16px;
+	font-weight:bold;
+	color:#111;
+	font-family: $serif;
+}
+.subtitle	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
 .tab__subtitle	{padding-bottom:6px; font-size:1.1rem; font-weight:bold; color:#888; text-transform:uppercase}
 .textinput	{width:35%; padding:2px 2px 0 2px; margin:0px 10px 0px 5px; font-size:1.3rem; text-align:center; font-weight:bold; border-width:0; background-color:rgba(0,0,0,0)}
 .small		{width:25px}
@@ -139,48 +156,107 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	width: 90vw;
 }
 
-/* Ligne 2 */
+/* INFOS 2 */
+	.infos {
+		display: flex;
+		align-items: center;
+		padding: 8px
+	}
 
-.caracBack	{
-	width:5.8%;
-	height:13vh;
-	margin:0 0.2% 0 0;
-	padding-top:6px;
-	text-align:center;
-	background-image:url(../img/sheet/frame-square.svg); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)
-}
-	
-	.caracLeg	{display:block; width:100%; height:2.6vh; background-color:rgba(0,0,0,0)}
-	.caracMod	{display:block; width:100%; height:5.8vh; background-color:rgba(0,0,0,0); font-weight:bold}
-	.caracVal	{display:block; width:100%; height:3vh; background-color:rgba(0,0,0,0); padding-left:5px}
-	
-	.inspiBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0.5%; text-align:center;
-				background-image:url(../img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-	.inspiration {font-size:3.0rem; padding:4px 0px 6px 2px}
+	.info {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		padding: 16px;
+		text-align: center;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -16px;
+			width: 100px;
+			height: 100%;
+			background-image:url(../img/sheet/border-left.svg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:top center;
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -16px;
+			width: 100px;
+			height: 100%;
+			background-image:url(../img/sheet/border-right.svg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:top center;
+		}
+		&__value {
+			font-family: $cursive;
+			font-size: 24px;
+		}
+		&__title {
+			font-family: $serif;
+			font-size: 16px;
+			margin-top: 8px;
+		}
+	}
 
-	.bonusBack	{width:5.5%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
-				background-image:url(../img/sheet/borderBonus.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-	.bonusVal	{width:55px; margin:1vh 0 1vh 3px}
+	.ca {
+		width:14.5%;
+		height:10vh;
+		margin:0 0.5% 0 0;
+		text-align:center;
+		padding: 16px 16px;
+		background-image:url(../img/sheet/frame-plant.svg); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0);
+		&__title {
+			font-family: $serif;
+			font-size: 16px;
+		}
+		&__value {
+			font-family: $cursive;
+			font-size: 24px;
+		}
+	}
+		
 
-	.CABack 	{width:5.5%; height:13vh; margin:0 0.5% 0 0; text-align:center;
-				background-image:url(../img/sheet/borderCA.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-	.CAVal		{width:50px; margin:2.5vh 0 0.5vh 0}
-	
-	.VitBack	{width:8.8%; height:10vh; margin:0 0.5% 2vh 0; text-align:center;
-				background-image:url(../img/sheet/borderVit.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-	.VitVal		{width:90px; margin:1vh 0 1vh 0}
 
-	.DVBack		{width:10.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
-				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-	.DV1Val		{width:70px; margin:1vh 0 0 0; font-weight:bold}
-	.DV2Val		{width:30px; margin:1vh 0 0 0}
+	.pvInfo		{
+		width:13.5%;
+		height:12vh;
+		margin:0 0.5% .8vh 0;
+		text-align:center;
+		border: 2px solid $green;
+		border-bottom: 8px solid $green;
+		&__title {
+			font-family: $serif;
+			font-size: 16px;
+		}
+		&__subtitle {
+			font-family: $serif;
+			font-size: 12px;
+		}
+		&__value {
+			font-family: $cursive;
+			font-size: 24px;
+			&--1 {
+				width:70px; margin:1vh 0 0 0; font-weight:bold
+			}
+			&--2 {
+				width:30px; margin:1vh 0 0 0
+			}
+		}
+		&:last-of-type {
+			padding-top: 20px;
+		}
+	}
 
-	.pvBack		{width:13.5%; height:12vh; margin:0 0.5% .8vh 0; text-align:center;
-				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-	.pvVal		{width:43px; margin:1vh 0 0 0}
-	
-	.deathBack	{width:11.2%; height:12vh; margin:0 0 .8vh 0; padding-top:10px; text-align:right;
-				background-image:url(../img/sheet/borderLarge.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
 	.deathBack input[type=checkbox] {position:relative; top:3px; margin:2px 0 5px 5px}
 	.deathBack input[type=checkbox].last {margin-right:16px}
 
@@ -195,10 +271,28 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 
 /* Colonne 2 */
 
-	.passive	{height:6vh; margin-bottom:1vh}
-		.blockPassive {margin-right:0.3%; text-align:left;
-						background-image:url(../img/sheet/borderPerception.png); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0)}
-		.passiveVal {width:25px; margin:10px 9% 0 4%}
+	.passive	{
+		display: flex;
+		align-items: center;
+		height:6vh;
+		margin-bottom:1vh;
+		&__value {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 70px;
+			height: 70px;
+			background-image:url(../img/sheet/circle.svg); background-size:100% 100%; background-repeat:no-repeat; background-position:top center; background-color:rgba(0,0,0,0);
+			font-family: $cursive;
+			font-size: 24px;
+		}
+		&__title {
+			font-family: $serif;
+			font-size: 16px;
+			padding-left: 8px;
+		}
+	}
+	
 	.comp		{height:64vh}
 
 /* Colonne 3 */
@@ -276,7 +370,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	.icones		{width:6%}
 
 	.header {height:auto}
-	.line2 {height:auto}
+	.infos {height:auto}
 	.line3 {height:auto}
 
 	.col1	{width:48.5%; margin:0 .5% 10px 1%}
