@@ -3,7 +3,7 @@ layout: sort
 name: Aide
 parent: lvl2
 id: 200
-checked: true
+checked: false
 data: "niveau 2 - abjuration"
 tps-incantation: "1 action"
 portee: "2 mètres"

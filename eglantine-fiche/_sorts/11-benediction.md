@@ -3,7 +3,7 @@ layout: sort
 name: Bénédiction
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - enchantement"
 tps-incantation: "1 action"
 portee: "9 mètres"

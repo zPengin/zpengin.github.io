@@ -3,7 +3,7 @@ layout: sort
 name: Protection contre le Bien et le Mal
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - abjuration"
 tps-incantation: "1 action"
 portee: "contact"

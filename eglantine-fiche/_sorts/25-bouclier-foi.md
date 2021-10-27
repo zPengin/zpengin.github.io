@@ -3,7 +3,7 @@ layout: sort
 name: Bouclier de la foi
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - abjuration"
 tps-incantation: "1 action bonus"
 portee: "18 mètres"

@@ -3,7 +3,7 @@ layout: sort
 name: Création ou Destruction d'eau
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - transmutation"
 tps-incantation: "1 action"
 portee: "9 mètres"

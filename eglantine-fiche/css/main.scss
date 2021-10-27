@@ -43,8 +43,7 @@ a 			{color: #d4b93f; font-weight: bold;}
 .line3 {height:71vh}
 .col1 {display:inline-block; width:15.5%; margin:0 .5% 0 .5%}
 .col2 {display:inline-block; width:16%; margin-right:.5%}
-.col3 {display:inline-block; width:33%; margin-right:.5%}
-.col4 {display:inline-block; width:33%;}
+.col3 {display:inline-block; width:65%; margin-right:.5%}
 
 .blockCadre {
 	border: 2px solid $green;
@@ -168,6 +167,7 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	.infos {
 		display: flex;
 		align-items: center;
+		justify-content: space-evenly;
 		padding: 8px
 	}
 
@@ -368,7 +368,22 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 		.persoVal	{width:27%; margin-bottom:5px}
 		.lvl		{font-size:1.4rem; font-weight:bold}
 		.slot {width:15px; text-align:center}
-		.editable > a {cursor:pointer; text-decoration:none; font-weight:bold; color:#b80000}
+		
+	
+		.sorts {
+			&__item {
+				display: flex;
+			}
+			&__list {
+				columns: 2;
+				-webkit-columns: 2;
+				-moz-columns: 2;
+				a {
+					display: inline-block;
+					padding-left: 8px;
+				}
+			}
+		}
 
 /* Colonne 4 */
 
@@ -409,7 +424,6 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	.col1	{width:48.5%; margin:0 .5% 10px 1%}
 	.col2	{width:48.5%; margin:0 1% 10px .5%}
 	.col3	{width:98%; margin:0 1% 10px 1%}
-	.col4	{width:98%; margin:0 1% 10px 1%}
 
 	h2			{margin:5px 0 0px 0}
 	textarea, div, table {font-size:1.3rem}
@@ -466,7 +480,6 @@ input.grimoire {margin-left:75px; padding:0 4px;}
 	.col1	{width:98%; margin:0 1% 5px 1%}
 	.col2	{width:98%; margin:0 1% 5px 1%}
 	.col3	{width:98%; margin:0 1% 5px 1%}  
-	.col4	{width:98%; margin:0 1% 5px 1%}
 
 	.jds, .percep, .comp {font-size:1.3rem}
 	.jds		{height:24vh; margin-bottom:5px}

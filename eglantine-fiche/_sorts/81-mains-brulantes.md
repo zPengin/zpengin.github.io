@@ -3,7 +3,7 @@ layout: sort
 name: Mains Brûlantes
 parent: lvl1
 id: 81
-checked: true
+checked: false
 data: "niveau 1 - évocation"
 tps-incantation: "1 action"
 portee: "personnelle (cône de 4,50 mètres)"

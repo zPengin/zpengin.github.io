@@ -3,7 +3,7 @@ layout: sort
 name: Blessure
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - nécromancie"
 tps-incantation: "1 action"
 portee: "contact"

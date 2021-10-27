@@ -3,7 +3,7 @@ layout: sort
 name: Balisage
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - évocation"
 tps-incantation: "1 action"
 portee: "36 mètres"

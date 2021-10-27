@@ -3,7 +3,7 @@ layout: sort
 name: Purification de nourriture et d'eau
 parent: lvl1
 id: 10
-checked: true
+checked: false
 data: "niveau 1 - transmutation (rituel)"
 tps-incantation: "1 action"
 portee: "3 mètres"

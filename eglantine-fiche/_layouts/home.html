@@ -204,9 +204,25 @@ layout: default
                 </div>
                 <p class="tab__subtitle">Niv 1 - Emplacements <input class="textinput small" id="slot1" maxlength="1" value="2"> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp1" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) +1)" "="">+</button></p>
                 <div class="sorts1" style="overflow:visible">
-                  <ul class="sorts__list">
+                  <ul class="sorts__list" style="overflow: auto">
                     {% for sort in site.sorts %}
                       {% if sort.parent == "lvl1" %}
+                      <li class="sorts__item">
+                        <input type="hidden" name="select_item[]" value="{{ sort.id }}">
+                        <input id="sortsMem10" name="check1" type="checkbox" {% if sort.checked == true %}checked="checked"{% endif %}>
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ sort.url }}" class="sort__name" target="_blank">{{ sort.name }}</a>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+                <p class="tab__subtitle">Niv 2 - Emplacements 
+                  <input class="textinput small" id="slot2" maxlength="1" value="1">
+                  Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp2&#39;).val(Number($(&#39;#slotExp2&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp2" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp2&#39;).val(Number($(&#39;#slotExp2&#39;).val()) +1)" "="">+</button></p>
+                <div class="sorts1" style="overflow:visible">
+                  <ul class="sorts__list" style="overflow: auto">
+                    {% for sort in site.sorts %}
+                      {% if sort.parent == "lvl2" %}
                       <li class="sorts__item">
                         <input type="hidden" name="select_item[]" value="{{ sort.id }}">
                         <input id="sortsMem10" name="check1" type="checkbox" {% if sort.checked == true %}checked="checked"{% endif %}>
