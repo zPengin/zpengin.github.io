@@ -1,7 +1,7 @@
 ---
 layout: sort
 name: Illumination protectrice
-parent: lvl1
+parent: skill
 id: 99
 checked: false
 data: "niveau 1"

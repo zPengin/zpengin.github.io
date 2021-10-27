@@ -2,7 +2,9 @@
 
 html { font-size: 10px; }
 
-body { font-family: 'Poppins', sans-serif; line-height: 1.5; }
+body { font-family: 'Poppins', sans-serif; }
+
+p, li { line-height: 1.5; }
 
 hr { display: block; clear: both; border: 0; }
 
@@ -263,7 +265,7 @@ td > input { padding: 3px !important; text-align: center !important; width: 100%
 
 .alerte { color: black; animation: highlight 2s; }
 
-@media only screen and (max-width: 1199px) { .header { width: 65%; } .nom { font-size: 2.6rem; padding: 0; } .classerace { font-size: 1.8rem; padding: 8px 0 0 0; } .back { font-size: 1.5rem; padding: 8px 0 0 0; } .interface { width: 29%; } .icones { width: 6%; } .header { height: auto; } .infos { height: auto; } .line3 { height: auto; } .col1 { width: 48.5%; margin: 0 .5% 10px 1%; } .col2 { width: 48.5%; margin: 0 1% 10px .5%; } .col3 { width: 98%; margin: 0 1% 10px 1%; } .col4 { width: 98%; margin: 0 1% 10px 1%; } h2 { margin: 5px 0 0px 0; } textarea, div, table { font-size: 1.3rem; } .jds, .percep, .comp { font-size: 1.3rem; } .passiveVal { margin: 11px 12.5% 0 5%; } }
+@media only screen and (max-width: 1199px) { .nom { font-size: 2.6rem; padding: 0; } .classerace { font-size: 1.8rem; padding: 8px 0 0 0; } .back { font-size: 1.5rem; padding: 8px 0 0 0; } .interface { width: 29%; } .icones { width: 6%; } .header { height: auto; } .infos { height: auto; } .line3 { height: auto; } .col1 { width: 48.5%; margin: 0 .5% 10px 1%; } .col2 { width: 48.5%; margin: 0 1% 10px .5%; } .col3 { width: 98%; margin: 0 1% 10px 1%; } .col4 { width: 98%; margin: 0 1% 10px 1%; } h2 { margin: 5px 0 0px 0; } textarea, div, table { font-size: 1.3rem; } .jds, .percep, .comp { font-size: 1.3rem; } .passiveVal { margin: 11px 12.5% 0 5%; } }
 
 @media only screen and (max-width: 699px) { .nom { font-size: 2.2rem; padding: 0; } .classerace { font-size: 1.4rem; padding: 4px 0 0 0; } .back { font-size: 1.4rem; padding: 4px 0 0 0; } .icones { width: 10%; } .header { position: sticky; position: -webkit-sticky; top: 0; z-index: 1; width: 100%; padding: 4px; } .content { display: block; } .details { width: 100%; } .stats { width: 100%; flex-direction: row; flex-wrap: wrap; } .stats .stat { width: 33.333%; } .infos { justify-content: center; flex-wrap: wrap; } .infos .info, .infos .ca { width: 30%; } .infos .pvInfo { width: 33%; margin: 0; margin-top: 16px; } .infos .pvInfo__title { font-size: 14px; } .col1 { width: 98%; margin: 0 1% 5px 1%; } .col2 { width: 98%; margin: 0 1% 5px 1%; } .col3 { width: 98%; margin: 0 1% 5px 1%; } .col4 { width: 98%; margin: 0 1% 5px 1%; } .jds, .percep, .comp { font-size: 1.3rem; } .jds { height: 24vh; margin-bottom: 5px; } .passiveVal { margin: 15px 12.5% 0px 5%; } .comp { height: 60vh; margin-bottom: 5px; } .materiel, .personnage { height: 85vh; } /* -5 padding blockcadre -2 menu -2 marge-bottom menu = 76 */ .personnage .tab4-1 { height: 56vh; } /* 76 */ #capacites { height: 94%; } .personnage .tab4-2 { height: 20vh; } #capacitesExtra { height: 92%; } .personnage .tab6-1 { height: 15vh; } /* 76 */ #backLong { height: 76%; } .personnage .tab6-2 { height: 38vh; } #histoire { height: 90%; } .personnage .tab6-3 { height: 23vh; } #allies { height: 90%; } #notes { height: 71vh; } }
 
