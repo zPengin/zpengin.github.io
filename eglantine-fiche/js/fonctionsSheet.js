@@ -4,6 +4,7 @@
 		$('#tab1').hide();
 		$('#tab2').hide();
 		$('#tab3').hide();
+		$('#tab4').hide();
 		$('#'+tab).show();
 		$('.menuTab1').removeClass('menuTabSelected');
 		$('#menu'+tab).addClass('menuTabSelected');
@@ -11,7 +12,6 @@
 
 	function see2(tab)
 	{
-		$('#tab4').hide();
 		$('#tab5').hide();
 		$('#tab6').hide();
 		$('#tab7').hide();
@@ -141,7 +141,7 @@
 			url : 'ajax_sheet.php',
        		type : 'POST',
        		data : data,
-       		dataType : 'html', // On désire recevoir du HTML
+       		dataType : 'html', // On dï¿½sire recevoir du HTML
        		success : function(responseText, statut)
 			{ 
 				$('#ajax').html(responseText);

@@ -1,40 +1,16 @@
 ---
 layout: default
 ---
-<div class="blockCadre personnage">
+<div class="personnage"style="background-image:url({{ "/img" | prepend: site.baseurl }}/background.jpg)">
 
   <div class="tab0">
 
-    <span id="menutab4" class="menuTab2 menuTabSelected" onclick="see2(&#39;tab4&#39;)">CAPACITÉS ET TRAITS</span>
-    <span id="menutab5" class="menuTab2" onclick="see2(&#39;tab5&#39;)">DESCRIPTION</span>
+    <span id="menutab5" class="menuTab2 menuTabSelected" onclick="see2(&#39;tab5&#39;)">DESCRIPTION</span>
     <span id="menutab6" class="menuTab2" onclick="see2(&#39;tab6&#39;)">BACKGROUND</span>
     <span id="menutab7" class="menuTab2" onclick="see2(&#39;tab7&#39;)">NOTES</span>
 
-  </div><div id="tab4" "="">
-  
-    <div class="tab4-1">
-      <p class="subrub"></p>
-      <textarea id="capacites">Sorts de domaine (lueurs féeriques, mains brûlantes)
-        Sort mineur supplémentaire *
-        
-        Illumination protectrice
-        
-        Chanceux (relancer un 1)
-        
-        Vaillant (AV aux JdS vs effrayé)
-        
-        Agilité halfeline (peut passer dans l'espace d'une créature de taille supérieure)
-        
-        Résistance des robustes (AV aux JdS contre le poison et résistance contre les dégâts de poison)
-      </textarea>
-    </div><div class="tab4-2">
-      <p class="subrub">Capacités supplémentaires</p>
-      <textarea id="capacitesExtra">A travers leurs estomacs :
-        Vous pouvez gagner votre vie confortablement et ce gratuitement pendant votre temps libre, en travaillant comme cuisinier. De plus, vous pouvez nourrir gratuitement vos compagnons d'aventure avec des repas modestes chaque jour, à moins que le DM ne discerne que vous
-      </textarea>
-    </div>
-    
-  </div><div id="tab5" style="display:none">
+  </div>
+  <div id="tab5">
 
     <div class="tab5-1">
       <div class="perso">Alignement</div><input id="align" class="textinput persoVal" maxlength="16" value="Loyal bon">
@@ -46,10 +22,10 @@ layout: default
       <div class="perso">Yeux</div><input id="yeux" class="textinput persoVal" maxlength="16" value="Noisette">
       <div class="perso">Cheveux</div><input id="cheveux" class="textinput persoVal" maxlength="16" value="Châtain">
     </div><div class="tab5-2">
-      <p class="subrub">Apparence du personnage</p>
+      <p class="subtitle">Apparence du personnage</p>
       <textarea id="apparence">Les grands yeux noisettes, des sourcils épais mais courts, les cheveux attachés à la va-vite en chignon, elle porte une robe courte et bouffante.</textarea>
     </div><div class="tab5-3">
-      <p class="subrub">Traits de personnalité</p>
+      <p class="subtitle">Traits de personnalité</p>
       <textarea id="traits" class="trait">
         J’ai vécu toute ma vie dans un village et ne connaît alors rien au monde.
         Je suis fascinée par tout ce que je croise et suis étonnée de tout et de rien à la fois. Les choses inhabituelles sont pour moi des événements communs.
@@ -59,19 +35,19 @@ layout: default
         Je me bats à la serpe, mais elle sert surtout à récolter des herbes.
       </textarea>
     </div><div class="tab5-4">
-      <p class="subrub">Idéaux</p>
+      <p class="subtitle">Idéaux</p>
       <textarea id="ideaux" class="traits">
         Je veux être une bonne personne et ne faire que des actions justes selon ma morale.
         J’ai beau être enfantine, je ne suis pas capricieuse pour ne rien devoir aux gens. Je donne sans recevoir afin de favoriser le bien être des autres avant le mien.
       </textarea>
     </div><div class="tab5-4">
-      <p class="subrub">Liens</p>
+      <p class="subtitle">Liens</p>
       <textarea id="liens" class="traits">
         Rien n’est plus important que les personnes de mon village, ainsi que cette mystérieuse personne dont je suis la recherche.
         Je partage toujours mon repas avec les plus démunis.
       </textarea>
     </div><div class="tab5-4">
-      <p class="subrub">Défauts</p>
+      <p class="subtitle">Défauts</p>
       <textarea id="defauts" class="traits">
         Comme une enfant, je n’ai aucun sens du risque et me jette à corps perdu aux grands dangers.
         La morale que je suis m’est propre et biaisée par ma vision du monde.
@@ -83,13 +59,13 @@ layout: default
   </div><div id="tab6" style="display:none">
 
     <div class="tab6-1">
-      <p class="subrub">Historique</p>
+      <p class="subtitle">Historique</p>
       <textarea id="backLong">Cuisinier</textarea>
     </div><div class="tab6-2">
-      <p class="subrub">Histoire du personnage</p>
+      <p class="subtitle">Histoire du personnage</p>
       <textarea id="histoire"></textarea>
     </div><div class="tab6-3">
-      <p class="subrub">Alliés et Organisations</p>
+      <p class="subtitle">Alliés et Organisations</p>
       <textarea id="allies"></textarea>
     </div>
     
@@ -98,7 +74,7 @@ layout: default
     PX <input id="XP" class="xpinput" maxlength="8" value="0">
     Prochain niveau <input id="XPNext" class="xpinput" maxlength="8" value="">
 
-    <p class="subrub"><br>NOTES</p>
+    <p class="subtitle"><br>NOTES</p>
     <textarea id="notes"></textarea>
 
   </div>

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="/eglantine/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Patrick+Hand+SC&family=Playfair+Display&display=swap" rel="stylesheet">
 	<link href="/eglantine/css/all.min.css" rel="stylesheet">
 	<link href="/eglantine/css/main.css" rel="stylesheet" type="text/css">
   <link type="application/atom+xml" rel="alternate" href="/eglantinefeed.xml"
@@ -33,10 +33,10 @@
                         <div class="header">
                           <div class="header__content">
                             <img class="image nocel" src="/eglantine/img/avatar.png" width="100" height="100" alt="" title="Click here to change the picture (jpg or png ; 100x100 pixels)" onclick="image()">
-                            <div id="nom" contenteditable="true" class="nom">Eglantine Feuilledethé</div>
-                            <div id="classe" contenteditable="true" class="classerace">Clerc (lumière) 1</div>
-                            <div id="race" contenteditable="true" class="classerace">Halfelin robuste (f)</div>
-                            <div id="backShort" contenteditable="true" class="back">Cuisinier</div>
+                            <div id="nom" class="nom">Eglantine Feuilledethé</div>
+                            <div id="classe" class="classerace">Clerc (lumière) 1</div>
+                            <div id="race" class="classerace">Halfelin robuste (f)</div>
+                            <div id="backShort" class="back">Cuisinier</div>
                           </div>
                           <div class="header__menu">
                             <a href="/eglantine/">Fiche</a>
@@ -158,13 +158,47 @@
       <div class="col1">
   
         <div class="blockCadre jds">
-        <input id="jdsMait0" type="checkbox"><input id="jdsBonus0" class="bonusinput" maxlength="3" value="+1">Force<br><input id="jdsMait1" type="checkbox"><input id="jdsBonus1" class="bonusinput" maxlength="3" value="+3">Dextérité<br><input id="jdsMait2" type="checkbox"><input id="jdsBonus2" class="bonusinput" maxlength="3" value="+2">Constitution<br><input id="jdsMait3" type="checkbox"><input id="jdsBonus3" class="bonusinput" maxlength="3" value="+0">Intelligence<br><input id="jdsMait4" type="checkbox" checked="checked"><input id="jdsBonus4" class="bonusinput" maxlength="3" value="+6">Sagesse<br><input id="jdsMait5" type="checkbox" checked="checked"><input id="jdsBonus5" class="bonusinput" maxlength="3" value="+3">Charisme<br>				<p class="title">Jets de sauvegarde</p>
+          <div class="jds__item">
+            <input id="jdsMait0" type="checkbox">
+            <span class="jds__value">+1</span>
+            <label for="jdsMait0" class="js__title">Force</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait1" type="checkbox">
+            <span class="jds__value">+3</span>
+            <label for="jdsMait1" class="js__title">Dextérité</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait2" type="checkbox">
+            <span class="jds__value">+2</span>
+            <label for="jdsMait2" class="js__title">Constitution</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait3" type="checkbox">
+            <span class="jds__value">+0</span>
+            <label for="jdsMait3" class="js__title">Intelligence</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait4" type="checkbox" checked="checked">
+            <span class="jds__value">+6</span>
+            <label for="jdsMait4" class="js__title">Sagesse</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait5" type="checkbox" checked="checked">
+            <span class="jds__value">+3</span>
+            <label for="jdsMait5" class="js__title">Charisme</label>
+          </div>
+          <p class="title">Jets de sauvegarde</p>
               
         </div><div class="blockCadre maitrises">
-          <span class="subtitle">&nbsp;&nbsp;Armes</span><br><textarea id="armes">armes courantes</textarea>
-          <span class="subtitle">&nbsp;&nbsp;Armures</span><br><textarea id="armures">armures légères et intermédiaires, boucliers</textarea>
-          <span class="subtitle">&nbsp;&nbsp;Outils</span><br><textarea id="outils">ustensiles de cuisinier</textarea>
-          <span class="subtitle">&nbsp;&nbsp;Langues</span><br><textarea id="langues">commun, halfelin</textarea>
+          <span class="subtitle">Armes</span>
+          <p id="armes">armes courantes</p>
+          <span class="subtitle">Armures</span>
+          <p id="armures">armures légères et intermédiaires, boucliers</p>
+          <span class="subtitle">Outils</span>
+          <p id="outils">ustensiles de cuisinier</p>
+          <span class="subtitle">Langues</span>
+          <p id="langues">commun, halfelin</p>
           <p class="title">Maîtrises et Langues</p>		
         </div>
   
@@ -206,9 +240,9 @@
             
             <li><input id="compMait0" type="checkbox" ><input id="compBonus0" class="bonusinput" maxlength="3" value="+3">Persuasion (Cha)</li>
             
-            <li><input id="compMait0" type="checkbox" ><input id="compBonus0" class="bonusinput" maxlength="3" value="+2">Religion (Int)</li>
+            <li><input id="compMait0" type="checkbox" checked="checked" ><input id="compBonus0" class="bonusinput" maxlength="3" value="+2">Religion (Int)</li>
             
-            <li><input id="compMait0" type="checkbox" ><input id="compBonus0" class="bonusinput" maxlength="3" value="+1">Représentation (Cha)</li>
+            <li><input id="compMait0" type="checkbox" checked="checked" ><input id="compBonus0" class="bonusinput" maxlength="3" value="+1">Représentation (Cha)</li>
             
             <li><input id="compMait0" type="checkbox" ><input id="compBonus0" class="bonusinput" maxlength="3" value="+4">Survie (Sag)</li>
             
@@ -225,9 +259,10 @@
   
           <div class="tab0">
   
-            <span id="menutab1" class="menuTab1 menuTabSelected" onclick="see1(&#39;tab1&#39;)">COMBAT</span>
-            <span id="menutab2" class="menuTab1" onclick="see1(&#39;tab2&#39;)">ÉQUIPEMENT</span>
-            <span id="menutab3" class="menuTab1" onclick="see1(&#39;tab3&#39;)">sorts</span>
+            <span id="menutab1" class="menuTab1 menuTabSelected" onclick="see1(&#39;tab1&#39;)">Combat</span>
+            <span id="menutab2" class="menuTab1" onclick="see1(&#39;tab2&#39;)">Équipements</span>
+            <span id="menutab3" class="menuTab1" onclick="see1(&#39;tab3&#39;)">Sorts</span>
+            <span id="menutab4" class="menuTab1" onclick="see1(&#39;tab4&#39;)">Capacités et Traits</span>
   
           </div>
           <div id="tab1">
@@ -265,53 +300,53 @@
                 </tr>
               </tbody></table>
             </div>
-            <div class="tab2- equipment">
+            <div class="tab2 equipment">
               <p class="tab__subtitle">Équipement</p>
-              <ul>
+              <ul class="equipment__list">
                 
-                <li>[ - ] Arbalète légère</li>
+                <li><span class="equipment__list__qt">-</span> Arbalète légère</li>
                 
-                <li>[ 20 ] Carreaux</li>
+                <li><span class="equipment__list__qt">20</span> Carreaux</li>
                 
-                <li>[ - ] Armure de cuir</li>
+                <li><span class="equipment__list__qt">-</span> Armure de cuir</li>
                 
-                <li>[ - ] Bouclier</li>
+                <li><span class="equipment__list__qt">-</span> Bouclier</li>
                 
-                <li>[ - ] Pendentif familiale</li>
+                <li><span class="equipment__list__qt">-</span> Pendentif familiale</li>
                 
-                <li>[ - ] Gros sac à dos</li>
+                <li><span class="equipment__list__qt">-</span> Gros sac à dos</li>
                 
-                <li>[ - ] Couverture</li>
+                <li><span class="equipment__list__qt">-</span> Couverture</li>
                 
-                <li>[ 9 ] Bougies</li>
+                <li><span class="equipment__list__qt">9</span> Bougies</li>
                 
-                <li>[ - ] Boîte d'allume-feu</li>
+                <li><span class="equipment__list__qt">-</span> Boîte d'allume-feu</li>
                 
-                <li>[ - ] Ustensiles de cuisinier</li>
+                <li><span class="equipment__list__qt">-</span> Ustensiles de cuisinier</li>
                 
-                <li>[ 2 ] Rations/1 jour</li>
+                <li><span class="equipment__list__qt">2</span> Rations/1 jour</li>
                 
-                <li>[ - ] Gourde</li>
+                <li><span class="equipment__list__qt">-</span> Gourde</li>
                 
-                <li>[ - ] Bâtonnets d'encens</li>
+                <li><span class="equipment__list__qt">-</span> Bâtonnets d'encens</li>
                 
-                <li>[ - ] Encensoir</li>
+                <li><span class="equipment__list__qt">-</span> Encensoir</li>
                 
-                <li>[ - ] Habits de cérémonie</li>
+                <li><span class="equipment__list__qt">-</span> Habits de cérémonie</li>
                 
-                <li>[ - ] Gamelle</li>
+                <li><span class="equipment__list__qt">-</span> Gamelle</li>
                 
-                <li>[ - ] Bouteille d'huile de cuisson</li>
+                <li><span class="equipment__list__qt">-</span> Bouteille d'huile de cuisson</li>
                 
-                <li>[ - ] Kit d'épices</li>
+                <li><span class="equipment__list__qt">-</span> Kit d'épices</li>
                 
-                <li>[ - ] Plusieurs livres de recettes</li>
+                <li><span class="equipment__list__qt">-</span> Plusieurs livres de recettes</li>
                 
-                <li>[ - ] Compendium d'espèces / plantes</li>
+                <li><span class="equipment__list__qt">-</span> Compendium d'espèces / plantes</li>
                 
-                <li>[ - ] Poudrière</li>
+                <li><span class="equipment__list__qt">-</span> Poudrière</li>
                 
-                <li>[ - ] Cuillière en électrum</li>
+                <li><span class="equipment__list__qt">-</span> Cuillière en électrum</li>
                 
               </ul>
             </div>
@@ -331,82 +366,116 @@
             </div><div class="tab3-2">
               <form name="formSorts" method="post" target="_blank">
                 <p class="subtitle">Sorts mineurs</p>
-                <div id="sorts0">
-                  
+                <div class="sorts sorts0">
+                  <ul class="sorts__list">
+                    
+                      
+                        
+                      
+                    
+                      
+                        
+                        <li class="sorts__item">
+                          <a href="https://zpengin.github.io//eglantine/sorts/02-flamme-sacree.html" class="sort__name" target="_blank">Flamme sacrée</a>
+                        </li>
+                        
+                      
+                    
+                      
+                        
+                        <li class="sorts__item">
+                          <a href="https://zpengin.github.io//eglantine/sorts/03-lumiere.html" class="sort__name" target="_blank">Lumière</a>
+                        </li>
+                        
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                        
+                        <li class="sorts__item">
+                          <a href="https://zpengin.github.io//eglantine/sorts/06-thaumaturgie.html" class="sort__name" target="_blank">Thaumaturgie</a>
+                        </li>
+                        
+                      
                     
                       
                     
-                  
-                    
                       
-                      <a href="http://localhost:4000/eglantine/sorts/02-flamme-sacree.html" class="sort__name" target="_blank">Flamme sacrée</a>
-                      
-                    
-                  
-                    
-                      
-                      <a href="http://localhost:4000/eglantine/sorts/03-lumiere.html" class="sort__name" target="_blank">Lumière</a>
-                      
-                    
-                  
                     
                       
                     
-                  
-                    
-                      
-                    
-                  
-                    
-                      
-                      <a href="http://localhost:4000/eglantine/sorts/06-thaumaturgie.html" class="sort__name" target="_blank">Thaumaturgie</a>
-                      
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
+                  </ul>
                 </div>
                 <p class="tab__subtitle">Niv 1 - Emplacements <input class="textinput small" id="slot1" maxlength="1" value="2"> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp1" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) +1)" "="">+</button></p>
-                <div id="sorts1" style="overflow:visible">
-  
-                  
+                <div class="sorts1" style="overflow:visible">
+                  <ul class="sorts__list">
                     
-                  
+                      
                     
-                  
+                      
                     
-                  
+                      
                     
-                  
+                      
                     
-                  
+                      
                     
-                  
+                      
                     
-                      <input type="hidden" name="select_item[]" value="/sorts/10-balisage">
-                      <input id="sortsMem10" name="check1" type="checkbox" checked="checked">
-                      <a href="http://localhost:4000/eglantine/sorts/10-balisage.html" class="sort__name" target="_blank">Balisage</a>
+                      
+                      <li class="sorts__item">
+                        <input type="hidden" name="select_item[]" value="/sorts/10-balisage">
+                        <input id="sortsMem10" name="check1" type="checkbox" checked="checked">
+                        <a href="https://zpengin.github.io//eglantine/sorts/10-balisage.html" class="sort__name" target="_blank">Balisage</a>
+                      </li>
+                      
                     
-                  
+                      
+                      <li class="sorts__item">
+                        <input type="hidden" name="select_item[]" value="/sorts/11-benediction">
+                        <input id="sortsMem10" name="check1" type="checkbox" checked="checked">
+                        <a href="https://zpengin.github.io//eglantine/sorts/11-benediction.html" class="sort__name" target="_blank">Bénédiction</a>
+                      </li>
+                      
                     
-                      <input type="hidden" name="select_item[]" value="/sorts/11-benediction">
-                      <input id="sortsMem10" name="check1" type="checkbox" checked="checked">
-                      <a href="http://localhost:4000/eglantine/sorts/11-benediction.html" class="sort__name" target="_blank">Bénédiction</a>
+                      
+                      <li class="sorts__item">
+                        <input type="hidden" name="select_item[]" value="/sorts/illumination-protectrice">
+                        <input id="sortsMem10" name="check1" type="checkbox" >
+                        <a href="https://zpengin.github.io//eglantine/sorts/illumination-protectrice.html" class="sort__name" target="_blank">Illumination protectrice</a>
+                      </li>
+                      
                     
-                  
-                    
-                      <input type="hidden" name="select_item[]" value="/sorts/illumination-protectrice">
-                      <input id="sortsMem10" name="check1" type="checkbox" >
-                      <a href="http://localhost:4000/eglantine/sorts/illumination-protectrice.html" class="sort__name" target="_blank">Illumination protectrice</a>
-                    
-                  
+                  </ul>
                 </div>
               </form>
             </div>
+          </div>
+          <div id="tab4" style="display:none">
+            <div class="tab4-1">
+              <ul class="capacites">
+                <li>Sorts de domaine (lueurs féeriques, mains brûlantes)</li>
+                <li>Sort mineur supplémentaire *</li>
+                <li>Illumination protectrice</li>
+                <li>Chanceux (relancer un 1)</li>
+                <li>Vaillant (AV aux JdS vs effrayé)</li>
+                <li>Agilité halfeline (peut passer dans l'espace d'une créature de taille supérieure)</li>
+                <li>Résistance des robustes (AV aux JdS contre le poison et résistance contre les dégâts de poison)</li>
+              </ul>
+            </div><div class="tab4-2">
+              <p class="subtitle">Capacités supplémentaires</p>
+              <p class="capacitesExtra">A travers leurs estomacs :
+                Vous pouvez gagner votre vie confortablement et ce gratuitement pendant votre temps libre, en travaillant comme cuisinier. De plus, vous pouvez nourrir gratuitement vos compagnons d'aventure avec des repas modestes chaque jour, à moins que le DM ne discerne que vous
+              </p>
+            </div>
+            
           </div>
         </div>
         
