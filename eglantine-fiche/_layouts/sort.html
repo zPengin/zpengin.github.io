@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="single-sort" style="background-image:url({{ "/img" | prepend: site.baseurl }}/background.jpg)" >
+	<div class="single-sort__content" itemprop="articleBody">
+		<h1>{{ page.name }}</h1>
+		<p><em>{{ page.data }}</em></p>
+		<p><span>Temps d'incantation : </span>{{ page.tps-incantation }}</p>
+		<p><span>Portée : </span>{{ page.portee }}</p>
+		<p><span>Composantes : </span>{{ page.composantes }}</p>
+		<p><span>Durée : </span>{{ page.duree }}</p>
+		<p>{{ page.description }}</p>
+	</div>
+</article>

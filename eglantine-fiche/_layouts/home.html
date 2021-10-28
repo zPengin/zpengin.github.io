@@ -1,0 +1,263 @@
+---
+layout: default
+---
+
+<div class="content">
+  <div class="stats">
+    {% for stat in page.stats %}
+      <div class="stat">
+        <p class="stat__title">{{ stat.title }}</p>
+        <div class="stat__value">
+          <div class="stat__modifier">
+            <span>{{ stat.modifier }}</span>
+          </div>
+          <div class="stat__total">
+            <span>{{ stat.total }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="details" style="background-image:url({{ "/img" | prepend: site.baseurl }}/background.jpg)">
+    <div class="infos">
+      <div class="block info">
+        <span class="info__value">+2</span>
+        <p class="info__title">Maîtrise</p>
+      </div>
+      <div class="block ca">
+        <span class="ca__value">16</span>
+        <p class="ca__title">CA<span>
+      </div>
+      <div class="block info">
+        <span class="info__value">7,50 m</span>
+        <p class="info__title">Vitesse</p>
+      </div>
+      <div class="block pvInfo">
+        <p class="pvInfo__subtitle">Total &nbsp; &nbsp; Utilisés</p>
+        <span class="pvInfo__value pvInfo__value--1">1d8</span> /
+        <span class="pvInfo__value pvInfo__value--2">0</span>
+        <p class="pvInfo__title">Dés de vie</p>
+      </div>
+      <div class="block pvInfo">
+        <p class="pvInfo__subtitle">max &nbsp; &nbsp; actuels &nbsp; &nbsp; temp</p>
+        <span class="pvInfo__value">10</span> /
+        <span class="pvInfo__value">10</span> /
+        <span class="pvInfo__value">0</span>
+        <p class="pvInfo__title">Points de vie</p>
+      </div>
+      <div class="block pvInfo">
+        <span class="pvInfo__subtitle">Succès</span> <input type="checkbox"><input type="checkbox"><input type="checkbox" class="last"><br>
+        <span class="pvInfo__subtitle">Échecs</span> <input type="checkbox"><input type="checkbox"><input type="checkbox" class="last">
+        <p class="pvInfo__title">JdS contre la mort</p>
+      </div>
+      
+    </div>
+    <div class="line3">
+  
+      <div class="col1">
+  
+        <div class="blockCadre jds">
+          <div class="jds__item">
+            <input id="jdsMait0" type="checkbox">
+            <span class="jds__value">+1</span>
+            <label for="jdsMait0" class="js__title">Force</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait1" type="checkbox">
+            <span class="jds__value">+3</span>
+            <label for="jdsMait1" class="js__title">Dextérité</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait2" type="checkbox">
+            <span class="jds__value">+2</span>
+            <label for="jdsMait2" class="js__title">Constitution</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait3" type="checkbox">
+            <span class="jds__value">+0</span>
+            <label for="jdsMait3" class="js__title">Intelligence</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait4" type="checkbox" checked="checked">
+            <span class="jds__value">+6</span>
+            <label for="jdsMait4" class="js__title">Sagesse</label>
+          </div>
+          <div class="jds__item">
+            <input id="jdsMait5" type="checkbox" checked="checked">
+            <span class="jds__value">+3</span>
+            <label for="jdsMait5" class="js__title">Charisme</label>
+          </div>
+          <p class="title">Jets de sauvegarde</p>
+              
+        </div><div class="blockCadre maitrises">
+          <span class="subtitle">Armes</span>
+          <p id="armes">armes courantes</p>
+          <span class="subtitle">Armures</span>
+          <p id="armures">armures légères et intermédiaires, boucliers</p>
+          <span class="subtitle">Outils</span>
+          <p id="outils">ustensiles de cuisinier</p>
+          <span class="subtitle">Langues</span>
+          <p id="langues">commun, halfelin</p>
+          <p class="title">Maîtrises et Langues</p>		
+        </div>
+  
+      </div>
+      <div class="col2">
+  
+        <div class="blockPassive passive">
+          <span class="passive__value">14</span>
+          <span class="passive__title">Sagesse (Perception) passive</span>
+        </div>
+        <div class="blockCadre comp">
+          <ul>
+            {% for skill in page.competences %}
+            <li><input id="compMait0" type="checkbox" {% if skill.checked == true %}checked="checked" {% endif %}><input id="compBonus0" class="bonusinput" maxlength="3" value="{{skill.modifier}}">{{skill.title}}</li>
+            {% endfor %}
+          </ul>
+          <p class="title">Compétences</p>
+        </div>
+  
+      </div>
+      <div class="col3">
+  
+        <div class="blockCadre materiel">
+  
+          <div class="tab0">
+  
+            <span id="menutab1" class="menuTab1 menuTabSelected" onclick="see1(&#39;tab1&#39;)">Combat</span>
+            <span id="menutab2" class="menuTab1" onclick="see1(&#39;tab2&#39;)">Équipements</span>
+            <span id="menutab3" class="menuTab1" onclick="see1(&#39;tab3&#39;)">Sorts</span>
+            <span id="menutab4" class="menuTab1" onclick="see1(&#39;tab4&#39;)">Capacités et Traits</span>
+  
+          </div>
+          <div id="tab1">
+  
+            <div class="tab1-1">
+              Initiative <input id="init" class="textinput" maxlength="4" value="+3">
+  
+              <p class="subtitle"><br>Armes</p>
+              <table>
+                <tbody><tr><th class="arme1">Nom</th><th class="arme2">Att</th><th class="arme3">Dégâts/Type</th></tr>
+              <tr><td><input id="arme0nom" class="textinput" maxlength="24" value="Serpe"></td><td><input id="arme0att" class="textinput" maxlength="6" value="+3"></td><td><input id="arme0dg" class="textinput" maxlength="32" value="1d4+1 tranchant"></td></tr><tr><td><input id="arme1nom" class="textinput" maxlength="24" value="Arbalète légère"></td><td><input id="arme1att" class="textinput" maxlength="6" value="+5"></td><td><input id="arme1dg" class="textinput" maxlength="32" value="1d8+3 perforant"></td></tr><tr><td><input id="arme2nom" class="textinput" maxlength="24" value=""></td><td><input id="arme2att" class="textinput" maxlength="6" value=""></td><td><input id="arme2dg" class="textinput" maxlength="32" value=""></td></tr><tr><td><input id="arme3nom" class="textinput" maxlength="24" value=""></td><td><input id="arme3att" class="textinput" maxlength="6" value=""></td><td><input id="arme3dg" class="textinput" maxlength="32" value=""></td></tr>						</tbody></table>
+            </div>
+            <div class="tab1-2">
+              <p class="subtitle"><br>Détails</p>
+              <textarea id="armesDetail">Serpe. Corps à corps :  +3 (1d4+1 tranchant ; légère)
+  
+              Arbalète légère. Distance :  +5 (1d8+3 perforant ; munitions (portée 24 m/96 m), chargement, à deux mains)
+              
+              </textarea>
+            </div>
+  
+          </div>
+          <div id="tab2" style="display:none">
+  
+            <div class="tab2-1">
+              <p class="tab__subtitle">Pièce</p>
+              <table>
+                <tbody><tr><th>PP</th><th>PO</th><th>PE</th><th>PA</th><th>PC</th></tr>
+                <tr>
+                  <td><input id="pp" class="textinput" maxlength="8" value="0"></td>
+                  <td><input id="po" class="textinput" maxlength="8" value="15"></td>
+                  <td><input id="pe" class="textinput" maxlength="8" value="0"></td>
+                  <td><input id="pa" class="textinput" maxlength="8" value="0"></td>
+                  <td><input id="pc" class="textinput" maxlength="8" value="0"></td>
+                </tr>
+              </tbody></table>
+            </div>
+            <div class="tab2 equipment">
+              <p class="tab__subtitle">Équipement</p>
+              <ul class="equipment__list">
+                {% for item in page.stuff %}
+                <li><span class="equipment__list__qt">{{item.qt}}</span> {{item.title}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="tab2-3">
+              <p class="tab__subtitle">Trésor</p>
+              <textarea id="tresors"></textarea>
+            </div>
+  
+          </div>
+          <div id="tab3" style="display:none">
+  
+            <div class="tab3-1">
+              <input id="caracSort" class="textinput spellcaster" maxlength="24" value="Clerc (Sag)">
+              <div class="incant">Sorts à préparer chaque jour</div><input id="nbreSort" class="textinput incantVal" maxlength="4" value="5">
+              <div class="incant">DD de sauvegarde des sorts</div><input id="DDSort" class="textinput incantVal" maxlength="4" value="14">
+              <div class="incant">Bonus d'attaque avec un sort</div><input id="bonusSort" class="textinput incantVal" maxlength="4" value="+6">
+            </div><div class="tab3-2">
+              <form name="formSorts" method="post" target="_blank">
+                <p class="subtitle">Sorts mineurs</p>
+                <div class="sorts sorts0">
+                  <ul class="sorts__list">
+                    {% for sort in site.sorts %}
+                      {% if sort.parent == "tours" %}
+                        {% if sort.checked == true %}
+                        <li class="sorts__item">
+                          <a href="{{ site.url }}{{ site.baseurl }}{{ sort.url }}" class="sort__name" target="_blank">{{ sort.name }}</a>
+                        </li>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+                <p class="tab__subtitle">Niv 1 - Emplacements <input class="textinput small" id="slot1" maxlength="1" value="2"> Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp1" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp1&#39;).val(Number($(&#39;#slotExp1&#39;).val()) +1)" "="">+</button></p>
+                <div class="sorts1" style="overflow:visible">
+                  <ul class="sorts__list" style="overflow: auto">
+                    {% for sort in site.sorts %}
+                      {% if sort.parent == "lvl1" %}
+                      <li class="sorts__item">
+                        <input type="hidden" name="select_item[]" value="{{ sort.id }}">
+                        <input id="sortsMem10" name="check1" type="checkbox" {% if sort.checked == true %}checked="checked"{% endif %}>
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ sort.url }}" class="sort__name" target="_blank">{{ sort.name }}</a>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+                <p class="tab__subtitle">Niv 2 - Emplacements 
+                  <input class="textinput small" id="slot2" maxlength="1" value="1">
+                  Utilisés &nbsp; &nbsp; <button type="button" class="plusmoins" onclick="$(&#39;#slotExp2&#39;).val(Number($(&#39;#slotExp2&#39;).val()) -1)">-</button> <input class="textinput small" id="slotExp2" maxlength="1" value="0"> <button type="button" class="plusmoins" onclick="$(&#39;#slotExp2&#39;).val(Number($(&#39;#slotExp2&#39;).val()) +1)" "="">+</button></p>
+                <div class="sorts1" style="overflow:visible">
+                  <ul class="sorts__list" style="overflow: auto">
+                    {% for sort in site.sorts %}
+                      {% if sort.parent == "lvl2" %}
+                      <li class="sorts__item">
+                        <input type="hidden" name="select_item[]" value="{{ sort.id }}">
+                        <input id="sortsMem10" name="check1" type="checkbox" {% if sort.checked == true %}checked="checked"{% endif %}>
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ sort.url }}" class="sort__name" target="_blank">{{ sort.name }}</a>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="tab4" style="display:none">
+            <div class="tab4-1">
+              <ul class="capacites">
+                <li>Sorts de domaine (lueurs féeriques, mains brûlantes)</li>
+                <li>Sort mineur supplémentaire *</li>
+                <li><a href="{{ site.url }}{{ site.baseurl }}/sorts/illumination-protectrice" class="sort__name" target="_blank">Illumination protectrice</a></li>
+                <li><a href="{{ site.url }}{{ site.baseurl }}/sorts/canalisation-energie-divine" class="sort__name" target="_blank">Canalisation d’énergie divine : radiance de l'aube</a></li>
+                <li>Chanceux (relancer un 1)</li>
+                <li>Vaillant (AV aux JdS vs effrayé)</li>
+                <li>Agilité halfeline (peut passer dans l'espace d'une créature de taille supérieure)</li>
+                <li>Résistance des robustes (AV aux JdS contre le poison et résistance contre les dégâts de poison)</li>
+              </ul>
+            </div><div class="tab4-2">
+              <p class="subtitle">Capacités supplémentaires</p>
+              <p class="capacitesExtra">A travers leurs estomacs :
+                Vous pouvez gagner votre vie confortablement et ce gratuitement pendant votre temps libre, en travaillant comme cuisinier. De plus, vous pouvez nourrir gratuitement vos compagnons d'aventure avec des repas modestes chaque jour, à moins que le DM ne discerne que vous
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
