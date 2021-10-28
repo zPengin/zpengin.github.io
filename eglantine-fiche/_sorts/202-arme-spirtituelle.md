@@ -5,7 +5,7 @@ parent: lvl2
 id: 200
 checked: true
 data: "niveau 2 - évocation"
-tps-incantation: "1 action"
+tps-incantation: "1 action bonus"
 portee: "18 mètres"
 composantes: "V, S"
 duree: "1 minute"
