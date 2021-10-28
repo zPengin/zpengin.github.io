@@ -3,7 +3,7 @@ layout: sort
 name: "Lumière"
 parent: tours
 id: 3
-checked: true
+checked: false
 data: "niveau 0 - évocation"
 tps-incantation: "1 action"
 portee: "contact"

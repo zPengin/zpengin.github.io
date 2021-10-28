@@ -3,7 +3,7 @@ layout: sort
 name: Assistance
 parent: tours
 id: 1
-checked: false
+checked: true
 data: "niveau 0 - divination"
 tps-incantation: "1 action"
 portee: "contact"
