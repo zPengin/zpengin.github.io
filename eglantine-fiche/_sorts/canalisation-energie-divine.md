@@ -4,7 +4,7 @@ name: "Canalisation d’énergie divine : radiance de l'aube"
 parent: skill
 id: 99
 checked: false
-data: "niveau 1"
+data: "niveau 2"
 tps-incantation: "/"
 portee: "/"
 composantes: "/"
