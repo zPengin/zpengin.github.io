@@ -1,0 +1,24 @@
+<div class="section instructions">
+    <div class="container container--no-p-mobile section__container">
+        <div class="section__content section__content--yellow">
+            <h2 class="section__title title-h3">
+                {{title}}
+            </h2>
+            <div class="list list--icons">  
+            {% for idx, item in list %}
+            <div class="list__item">
+                <div class="list__icon">
+                    <img alt="{{ item.icon-title|striptags }}" src="{{ item.icon }}">
+                </div>
+                <div class="list__content">
+                    <p class="list__description">{{ item.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+            <div class="section__footer">
+                <a href="#" class="button button--secondary" title="Voir toutes les consignes">Toutes les consignes</a>
+            </div>
+        </div>
+    </div>
+</div>

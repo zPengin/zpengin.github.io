@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.site-main {
+    padding-bottom: pxtorem(80);
+}

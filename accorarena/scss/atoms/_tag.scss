@@ -1,0 +1,14 @@
+.tag {
+    border-radius: pxtorem(6);
+    font-family: $font-family-base;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    padding: pxtorem(8) pxtorem(16);
+    @include media-breakpoint-up(md) {
+        font-size: pxtorem(18);
+        padding: pxtorem(18) pxtorem(36);
+    }
+    &--yellow {
+        background-color: $yellow;
+    }
+}

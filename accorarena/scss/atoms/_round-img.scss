@@ -1,0 +1,11 @@
+@mixin round-img($w, $h) {
+    width: pxtorem($w);
+    min-width: pxtorem($w);
+    height: pxtorem($h);
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        max-width: 100%;
+    }
+}

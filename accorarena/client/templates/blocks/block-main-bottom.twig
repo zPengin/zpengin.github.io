@@ -1,0 +1,31 @@
+<div class="section bottom">
+    <div class="container section__container">
+        <h2 class="section__title title-h2">
+            {{title}}
+        </h2>
+    </div>
+    <div class="container section__container bottom__container">
+        <div class="bottom__content bottom__content--left">
+            {{ bottom.description }}
+        </div>
+        <div class="bottom__content bottom__content--left">
+            <div class="highlights">
+                <div class="highlights__container">    
+                {% for idx, highlight in highlights %}
+                {% if idx < 3 %}
+                <div class="highlight">
+                    <div class="highlight__content">
+                        <h4 class="highlight__title">{{ highlight.title }}</h4>
+                        <p class="highlight__description">{{ highlight.description }}</p>
+                    </div>
+                    <div class="highlight__img">
+                        <img alt="{{ highlight.title|striptags }}" src="{{ highlight.image }}">
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

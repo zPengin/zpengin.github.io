@@ -1,0 +1,43 @@
+.highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $grey;
+    padding: pxtorem(8) 0;
+    @include media-breakpoint-up(md) {
+        max-width: pxtorem(350);
+    }
+    &__content {
+        position: relative;
+        padding: pxtorem(3) pxtorem(17);
+        &:after {
+            content: '';
+            display: block;
+            border-right: 1px solid $light-grey;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+    }
+    &__title {
+        font-size: $font-size-title-xs;
+        font-weight: $font-weight-normal;
+        margin-bottom: pxtorem(4);
+        text-transform: uppercase;
+    }
+    &__description {
+        font-size: $font-size-xs;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: pxtorem(115);
+        img {
+            width: pxtorem(65);
+            height: pxtorem(65);
+        }
+    }
+}

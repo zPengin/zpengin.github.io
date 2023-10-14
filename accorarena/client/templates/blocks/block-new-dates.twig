@@ -1,0 +1,31 @@
+<div class="section new-dates">
+    <div class="container section__container">
+        <h2 class="section__title title-h2">
+            {{title}}
+        </h2>
+        <div class="cards cards--new-dates">
+            {% for idx, date in dates %}
+            {% if idx < 4 %}
+            <div class="card">
+                <a href="{{ date.link_url }}" class="card__container" title="{{ date.link_text }}">
+                    <div class="card__top">
+                        <p class="card__subtitle">{{ date.date }}</p>
+                        <p class="card__info">{{ date.info }}</p>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__img">
+                            <img alt="{{ date.title|striptags }}" src="{{ date.image }}">
+                        </div>
+                        <p class="card__title">{{ date.title }}</p>
+                    </div>
+                    <p class="card__description">{{ date.description }}</p>
+                    <div class="card__footer">
+                        <p class="link card__link">{{ date.link_text }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

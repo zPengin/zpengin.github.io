@@ -1,0 +1,48 @@
+    
+    <header class="site-header">
+        <div class="site-header__container container">
+            <nav class="top-nav">
+                <ul class="top-nav__items">
+                    <li class="top-nav__item">
+                        <a href="#programmation" class="top-nav__item__link" title="Voir la programmation">
+                            Programmation
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-header__logo">
+                <a href="#" title="Accor Arena">
+                    <img src="../assets/img/accorarena-logo.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- /.navbar -->
+    <nav class="site-nav">
+        <div class="container site-nav__container">
+            <ul class="site-nav__items">
+                <li class="site-nav__item">
+                    <a href="#bottom" class="site-nav__item__link" title="Aller en bas">
+                        <span aria-hidden="true">
+                            {% include '../icons/arrow.twig' %}
+                        </span>
+                    </a>
+                </li>
+                <li class="site-nav__item">
+                    <a href="" class="site-nav__item__link site-nav__item__link--burger" title="Ouvrir le menu">
+                        <span aria-hidden="true">
+                            {% include '../icons/burger.twig' %}
+                        </span>
+                        <span class="site-nav__item__text">menu</span>
+                    </a>
+                </li>
+                <li class="site-nav__item">
+                    <a href="#ticket" class="site-nav__item__link" title="Accéder à la billeterie">
+                        <span aria-hidden="true">
+                            {% include '../icons/ticket.twig' %}
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>  

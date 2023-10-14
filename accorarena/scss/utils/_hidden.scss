@@ -1,0 +1,13 @@
+.hidden-md {
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+
+.hidden-xl {
+    display: block;
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}

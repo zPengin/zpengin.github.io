@@ -1,0 +1,112 @@
+$header-height: 5rem;
+
+.site-header {
+    &__container {
+        background-color: $white;
+        height: $header-height;
+        padding: 0 $gutter;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    &__logo {
+        display: none;
+        grid-area: 1 / 2 / 2 / 3;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        svg {
+            height: pxtorem(27);
+        }
+    }
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 2;
+    &__items {
+        list-style: none;
+        padding: 0;
+    }
+    &__item {
+        &__link {
+            position: relative;
+            color: $black;
+            font-size: pxtorem(25);
+            font-weight: $font-weight-bold;
+            text-decoration: none;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: pxtorem(-3);
+                left: 0;
+                width: 0;
+                border-bottom: 5px solid rgba($yellow, .4);
+                transition: $transition-base;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                font-weight: $font-weight-normal;
+            }
+        }
+    }
+}
+
+.site-nav {
+    position: fixed;
+    bottom: pxtorem(30);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    &__items {
+        align-items: center;
+        display: flex;
+        gap: pxtorem(64);
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+    &__item {
+        &__link {
+            align-items: center;
+            background-color: $black;
+            border-radius: 50%;
+            color: $white;
+            display: flex;
+            font-size: $font-size-xs;
+            justify-content: center;
+            height: pxtorem(60);
+            text-decoration: none;
+            width: pxtorem(60);
+            transition: $transition-base;
+            svg {
+                height: pxtorem(32);
+                width: pxtorem(32);
+            }
+            &:hover, &:focus {
+                background-color: $light-black;
+            }
+            &--burger {
+                flex-direction: column;
+                height: pxtorem(80);
+                width: pxtorem(80);
+                svg {
+                    height: pxtorem(48);
+                    width: pxtorem(48);
+                }
+            }
+        }
+        &__text {
+            margin-top: pxtorem(-6);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<div class="hero-card hero-card--pink">
+    <div class="hero-card__cover" style="background-image: url('{{ cover }}');">
+    </div>
+    <div class="container container--no-p-mobile">
+        <div class="hero-card__block">
+            <div class="hero-card__block__content">
+                <div class="hero-card__block__top">
+                    <div class="hero-card__img">
+                        <img alt="{{ title|striptags }}" src="{{ album }}">
+                    </div>
+                    <div class="hero-card__infos">
+                        <p class="hero-card__date">{{ date }}</p>
+                        <h1 class="hero-card__title">{{ title }}</h1>
+                    </div>
+                </div>
+                <div class="hero-card__block__bottom">
+                    <p class="hero-card__subtitle">{{ subtitle }}</p>
+                    <div class="hero-card__block__buttons">
+                        {% for idx, link in links %}
+                        {% if idx < 2 %}
+                        <a href="{{ link.url }}" class="button button--primary hero-card__button{% if idx == 0 %} hidden-xl{% endif %}">{{ link.text }}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="hero-card__block__scroll hidden-xl">
+                    <a href="#bottom" class="hero-card__scroll">
+                        {% include '../icons/scroll.twig' %}
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card__block__background hero-card__block__background--pink"></div>
+        </div>
+    </div>
+</div>

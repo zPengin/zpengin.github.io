@@ -1,0 +1,33 @@
+<div class="section articles">
+    <div class="container section__container">
+        <h2 class="section__title title-h2">
+            {{title}}
+        </h2>
+    </div>
+    <div class="container section__container container--no-gutter container--articles">
+        <div class="cards cards--articles">
+            <div class="cards__container gutter">    
+            {% for idx, card in cards %}
+            {% if idx < 3 %}
+            <div class="card">
+                <a href="{{ card.link_url }}" class="card__container" title="{{ card.link_text }}">
+                    <div class="card__top">
+                        <div class="card__img">
+                            <img alt="{{ card.title|striptags }}" src="{{ card.image }}">
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__subtitle">{{ card.title }}</h3>
+                        <p class="card__description">{{ card.description }}</p>
+                    </div>
+                    <div class="card__footer">
+                        <p href="{{ card.link_url }}" class="link card__link">{{ card.link_text }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

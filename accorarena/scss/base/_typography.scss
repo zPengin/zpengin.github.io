@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@include font-face("AccorArena MidnightBlue", "../fonts/AccorArena-MidnightBlue", 400, normal, woff2 woff);
+@include font-face("AccorArena White", "../fonts/AccorArena-White", 400, normal, woff2 woff);
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: normal;
+    color: $text-color;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.title-h2 {
+    font-family: $font-family-title;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-base;
+    margin-bottom: pxtorem(30);
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-xl;
+        margin-bottom: pxtorem(40);
+    }
+}
+
+.title-h3 {
+    font-family: $font-family-base;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    margin-bottom: pxtorem(20);
+    .intro & {
+        margin-top: pxtorem(40);
+        @include media-breakpoint-up(md) {
+            margin-top: pxtorem(60);
+        }
+    }
+}

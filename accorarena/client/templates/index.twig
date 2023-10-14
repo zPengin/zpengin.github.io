@@ -1,0 +1,12 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+<div class="home">
+    {% include 'blocks/block-hero-card.twig' with hero_card %}
+    {% include 'blocks/block-intro.twig' with intro %}
+    {% include 'blocks/block-new-dates.twig' with new_dates %}
+    {% include 'blocks/block-cards.twig' with articles %}
+    {% include 'blocks/block-list.twig' with instructions %}
+    {% include 'blocks/block-main-bottom.twig' with bottom %}
+</div>
+{% endblock %}

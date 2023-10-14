@@ -1,0 +1,144 @@
+{
+  "title":"Angèle - Accor Arena",
+  "description":"Retrouvez les prochaines dates de concert d'Angèle à l'Accor Arena",
+  "hero_card": {
+    "title":"Angèle",
+    "cover":"../assets/img/tmp/cover-full.png",
+    "album":"../assets/img/tmp/album.png",
+    "date": "24 au 27 janvier 2021",
+    "subtitle": "Exclusivité en France !",
+    "links": [
+      {
+        "text": "Je réserve",
+        "url": "#"
+      },
+      {
+        "text": "Billet Premium",
+        "url": "#"
+      }
+    ]
+  },
+  "intro": {
+    "title":"Le show",
+    "description": "<p class='paragraphe'>Texte Regular // Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.</p><h3 class='title-h3'>Première partie</h3><p class='paragraphe'>Texte Regular // Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.</p>",
+    "tag": "Ouverture des portes à 19h30"
+  },
+  "new_dates": {
+    "title": "Ses dates",
+    "dates": [
+      {
+        "title":"Angèle - Brol Tour",
+        "description":"Roméo Elvis en première partie",
+        "image":"../assets/img/tmp/calendar.png",
+        "date": "25 JANVIER 2020",
+        "info": "19h30",
+        "link_text": "Je réserve",
+        "link_url": "#"
+      },
+      {
+        "title":"Angèle - Brol Tour",
+        "description":"Roméo Elvis en première partie",
+        "image":"../assets/img/tmp/calendar.png",
+        "date": "25 JANVIER 2020",
+        "info": "19h30",
+        "link_text": "Infos",
+        "link_url": "#"
+      },
+      {
+        "title":"Angèle - Brol Tour",
+        "description":"Roméo Elvis en première partie",
+        "image":"../assets/img/tmp/calendar.png",
+        "date": "25 JANVIER 2020",
+        "info": "19h30",
+        "link_text": "Annulé",
+        "link_url": "#"
+      },
+      {
+        "title":"Angèle - Brol Tour",
+        "description":"Roméo Elvis en première partie",
+        "image":"../assets/img/tmp/calendar.png",
+        "date": "25 JANVIER 2020",
+        "info": "19h30",
+        "link_text": "Liste d'attente",
+        "link_url": "#"
+      }
+      ]
+  },
+  "articles": {
+    "title": "Nos offres",
+    "cards": [
+      {
+        "title":"Offre",
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops. ",
+        "image":"../assets/img/tmp/offer.jpg",
+        "link_text": "Je découvre",
+        "link_url": "#"
+      },
+      {
+        "title":"Offre",
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops. ",
+        "image":"../assets/img/tmp/offer.jpg",
+        "link_text": "Je découvre",
+        "link_url": "#"
+      },
+      {
+        "title":"Offre",
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops. ",
+        "image":"../assets/img/tmp/offer.jpg",
+        "link_text": "Je découvre",
+        "link_url": "#"
+      }
+      ]
+  },
+  "instructions": {
+    "title": "Les consignes",
+    "list": [
+      {
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur",
+        "icon":"../assets/img/tmp/icon-list.svg",
+        "icon-title":"Icon cube"
+      },
+      {
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur",
+        "icon":"../assets/img/tmp/icon-list.svg",
+        "icon-title":"Icon cube"
+      },
+      {
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur",
+        "icon":"../assets/img/tmp/icon-list.svg",
+        "icon-title":"Icon cube"
+      },
+      {
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur",
+        "icon":"../assets/img/tmp/icon-list.svg",
+        "icon-title":"Icon cube"
+      },
+      {
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur",
+        "icon":"../assets/img/tmp/icon-list.svg",
+        "icon-title":"Icon cube"
+      },
+      {
+        "description":"Texte Regular // Hac ex causa conlaticia stipe Valerius humatur",
+        "icon":"../assets/img/tmp/icon-list.svg",
+        "icon-title":"Icon cube"
+      }
+      ]
+  },
+  "bottom": {
+    "title": "À propos de l’artiste",
+    "description": "<h3 class='title-h3'>Sous titre  // H3</h3><p class='paragraphe'>Texte Regular // Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.  Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.</p>",
+    "highlights": [
+      {
+        "title": "Production",
+        "description":"Hac ex causa conlaticia stipe Valerius humatur. Hac ex causa conlaticia stipe Valerius.",
+        "image":"../assets/img/tmp/accorarena-prod.png"
+      },
+      {
+        "title": "Production",
+        "description":"Hac ex causa conlaticia stipe Valerius humatur. Hac ex causa conlaticia stipe Valerius.",
+        "image":"../assets/img/tmp/accorarena-prod.png"
+      }
+      ]
+  }
+}

@@ -1,0 +1,18 @@
+.bottom {
+    &__container {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__content {
+        &--left {
+            max-width: pxtorem(590);
+            margin-bottom: pxtorem(36);
+            @include media-breakpoint-up(md) {
+                padding-right: pxtorem(50);
+                margin-bottom: 0;
+            }
+        }
+    }
+}

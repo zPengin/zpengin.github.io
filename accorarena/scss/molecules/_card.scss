@@ -1,0 +1,167 @@
+.cards--articles {
+    overflow: auto;
+    margin-top: pxtorem(-30);
+    .cards__container {
+        display: flex;
+        justify-content: space-between;
+        gap: pxtorem(20);
+        padding-top: pxtorem(30);
+        padding-bottom: pxtorem(20);
+        min-width: pxtorem(740);
+        @include media-breakpoint-up(md) {
+            min-width: pxtorem(870);
+        }
+    }
+    .card {
+        width: pxtorem(210);
+        @include media-breakpoint-up(md) {
+            width: pxtorem(320);
+        }
+        &__container {
+            display: block;
+            color: $black;
+            text-decoration: none;
+            padding: pxtorem(10);
+            box-shadow: 0px 2px 30px 0px transparent;
+            transform: translateY(0);
+            transition: $transition-base;
+            &:hover, &:focus {
+                box-shadow: 0px 2px 30px 0px rgba(5, 0, 51, 0.20);
+                transform: translateY(-.5rem);
+            }
+        }
+        &__footer {
+            padding-top: pxtorem(16);
+            @include media-breakpoint-up(md) {
+                padding-top: pxtorem(24);
+            }
+        }
+        &__img {
+            margin-bottom: pxtorem(10);
+            overflow: hidden;
+            height: pxtorem(160);
+            img {
+                width: 100%;
+                height: pxtorem(160);
+                object-fit: cover;
+                transition: $transition-base;
+            }
+        }
+        &__subtitle {
+            font-family: $font-family-title;
+            font-weight: $font-weight-normal;
+            line-height: 1.25;
+            margin-bottom: pxtorem(10);
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-md;
+            }
+        }
+        &__description {
+            font-size: $font-size-xs;
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-title-xs;
+            }
+        }
+    }
+
+}
+
+.cards--new-dates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: pxtorem(10);
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card {
+        &__container {
+            display: block;
+            color: $black;
+            text-decoration: none;
+            border-radius: $border-radius-sm;
+            background: $white;
+            box-shadow: 0px 2px 30px 0px rgba(5, 0, 51, 0.20);
+            padding: pxtorem(5);
+            width: inherit;
+            transform: translateY(0);
+            transition: $transition-base;
+            &:hover, &:focus {
+                box-shadow: 0px 2px 30px 0px rgba(5, 0, 51, 0.20);
+                transform: translateY(-.5rem);
+            }
+            @include media-breakpoint-up(md) {
+                box-shadow: 0px 2px 30px 0px transparent;
+                padding: pxtorem(8);
+            }
+        }
+        &__top {
+            border-bottom: solid 1px $light-grey;
+            padding-bottom: pxtorem(8);
+            margin-bottom: pxtorem(13);
+            @include media-breakpoint-up(md) {
+                padding: pxtorem(13) pxtorem(12);
+            }
+        }
+        &__content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: pxtorem(18);
+            padding: pxtorem(6);
+            @include media-breakpoint-up(md) {
+                padding: pxtorem(12);
+                margin-bottom: pxtorem(10);
+            }
+        }
+        &__subtitle {
+            margin-bottom: 0;
+            font-family: $font-family-title;
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-md;
+                margin-bottom: pxtorem(8);
+            }
+        }
+        &__info {
+            font-family: $font-family-title;
+            font-size: $font-size-xs;
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-title-xs;
+            }
+        }
+        &__title {
+            font-family: $font-family-base;
+            font-size: $font-size-title-xs;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-base;
+        }
+        &__img {
+            @include round-img(36, 36);
+            @include media-breakpoint-up(md) {
+                height: pxtorem(52);
+                width: pxtorem(52);
+                min-width: pxtorem(52);
+            }
+        }
+        &__description {
+            font-style: italic;
+            font-size: $font-size-xs;
+            padding-inline: pxtorem(6);
+            @include media-breakpoint-up(md) {
+                padding-inline: pxtorem(12);
+            }
+        }
+        &__footer {
+            border-top: solid 1px $light-grey;
+            padding-top: pxtorem(8);
+            padding-bottom: pxtorem(8);
+            margin-top: pxtorem(8);
+            text-align: center;
+            @include media-breakpoint-up(md) {
+                text-align: left;
+                margin-top: pxtorem(16);
+                padding-inline: pxtorem(12);
+            }
+        }
+    }
+}

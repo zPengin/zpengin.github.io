@@ -1,0 +1,18 @@
+.link {
+    display: inline-block;
+    color: $black;
+    font-family: $font-family-base;
+    font-size: $font-size-link;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    margin-bottom: pxtorem(20);
+    text-decoration: none;
+    transform: translateX(0);
+    transition: $transition-base;
+    &:before {
+        content: '> ';
+    }
+    &:hover, &:focus {
+        transform: translateX(.5rem);
+    }
+}

@@ -1,0 +1,28 @@
+.section {
+    margin-bottom: pxtorem(40);
+    @include media-breakpoint-up(md) {
+        margin-bottom: pxtorem(70);
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 0;
+        gap: pxtorem(20);
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__content {
+        padding: pxtorem(48) pxtorem(32);
+        &--yellow {
+            background-color: $yellow;
+        }
+    }
+    &__footer {
+        text-align: center;
+    }
+}
